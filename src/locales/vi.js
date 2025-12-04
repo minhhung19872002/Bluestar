@@ -51,7 +51,7 @@ const vi = {
 		items: [
 			"Chúng tôi sẽ hướng dẫn bạn từng bước những gì bạn cần làm",
 			"Để phát triển công ty và đạt được tầm cao mới",
-			"Mọi người đều sẽ hài lòng từ cổ đông đến nhân viên",
+			"Mọi người đều sẽ hài lòng từ cổ đông đến nhân viên.",
 		],
 		button: "CHI TIẾT",
 	},
