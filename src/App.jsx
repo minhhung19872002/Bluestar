@@ -4,23 +4,20 @@ import "./css/fontawesome-all.css";
 import "./css/swiper.css";
 import "./css/magnific-popup.css";
 import { useEffect } from "react";
+import { useLanguage } from "./LanguageContext";
 
 function App() {
+	const { t, language, toggleLanguage, languageNames } = useLanguage();
+
 	useEffect(() => {
-		document.title = "BlueStar - IT Outsourcing Services";
+		document.title = t.pageTitle;
 		document
 			.querySelector('meta[name="description"]')
-			?.setAttribute(
-				"content",
-				"BlueStar offers IT consulting and software services to clients worldwide."
-			);
+			?.setAttribute("content", t.metaDescription);
 		document
 			.querySelector('meta[name="keywords"]')
-			?.setAttribute(
-				"content",
-				"IT outsourcing, software services, consulting, BlueStar, business growth"
-			);
-	}, []);
+			?.setAttribute("content", t.metaKeywords);
+	}, [t]);
 
 	return (
 		<div>
@@ -35,7 +32,7 @@ function App() {
 				<a className="navbar-brand logo-image" href="index.html">
 					<img
 						src="../images/logo.jpg"
-						alt="alternative"
+						alt="BlueStar Logo"
 						style={{ width: "230px", height: "80px" }}
 					/>
 				</a>
@@ -46,7 +43,7 @@ function App() {
 					data-target="#navbarsExampleDefault"
 					aria-controls="navbarsExampleDefault"
 					aria-expanded="false"
-					aria-label="Toggle navigation"
+					aria-label={t.nav.toggleNav}
 				>
 					<span className="navbar-toggler-awesome fas fa-bars"></span>
 					<span className="navbar-toggler-awesome fas fa-times"></span>
@@ -67,7 +64,7 @@ function App() {
 					>
 						<li className="nav-item">
 							<a className="nav-link page-scroll" href="#header">
-								Home <span className="sr-only">(current)</span>
+								{t.nav.home} <span className="sr-only">(current)</span>
 							</a>
 						</li>
 						<li className="nav-item">
@@ -75,45 +72,71 @@ function App() {
 								className="nav-link page-scroll"
 								href="#services"
 							>
-								Services
+								{t.nav.services}
 							</a>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link page-scroll" href="#pricing">
-								Pricing
+								{t.nav.pricing}
 							</a>
 						</li>
 						<li className="nav-item">
 							<a className="nav-link page-scroll" href="#request">
-								Request
+								{t.nav.request}
 							</a>
 						</li>
 
 						<li className="nav-item dropdown">
 							<a
-								className="nav-link  page-scroll"
+								className="nav-link page-scroll"
 								href="#about"
 								role="button"
 								aria-haspopup="true"
 								aria-expanded="false"
 							>
-								About
+								{t.nav.about}
 							</a>
-							{/* <a className="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">About</a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" href="terms-conditions.html"><span className="item-text">Terms Conditions</span></a>
-                        <div className="dropdown-items-divide-hr"></div>
-                        <a className="dropdown-item" href="privacy-policy.html"><span className="item-text">Privacy Policy</span></a>
-                    </div> */}
 						</li>
 
 						<li className="nav-item">
 							<a className="nav-link page-scroll" href="#contact">
-								Contact
+								{t.nav.contact}
 							</a>
 						</li>
+
 					</ul>
-					<span className="nav-item social-icons">
+					<span className="nav-item social-icons" style={{ display: "flex", alignItems: "center" }}>
+						{/* Language Switcher */}
+						<button
+							onClick={toggleLanguage}
+							style={{
+								background: "none",
+								border: "none",
+								outline: "none",
+								cursor: "pointer",
+								padding: "0",
+								marginRight: "10px",
+								display: "flex",
+								alignItems: "center",
+								boxShadow: "none",
+							}}
+							title={language === "vi" ? "Switch to English" : "Chuyển sang Tiếng Việt"}
+						>
+							<img
+								src={language === "vi"
+									? "https://flagcdn.com/w40/us.png"
+									: "https://flagcdn.com/w40/vn.png"
+								}
+								alt={language === "vi" ? "English" : "Tiếng Việt"}
+								style={{
+									width: "32px",
+									height: "22px",
+									objectFit: "cover",
+									borderRadius: "3px",
+									border: "1px solid rgba(255,255,255,0.3)",
+								}}
+							/>
+						</button>
 						<span className="fa-stack">
 							<a href="https://www.facebook.com/" target="_blank">
 								<i className="fas fa-circle fa-stack-2x facebook"></i>
@@ -135,29 +158,15 @@ function App() {
 						<div className="row">
 							<div className="col-lg-6">
 								<div className="text-container">
-									<h1> About Us</h1>
+									<h1>{t.header.title}</h1>
 									<p className="p-large">
-										BLUESTAR , an IT outsourcing company
-										with over 10 years of experience,
-										provides consulting and software
-										services and technology solutions to
-										various clients across North America,
-										Australia, Korea, Japan, Singapore and
-										Vietnam. At BLUESTAR, we have over 100
-										experts who specialize in technological
-										advancements and innovations. We provide
-										our products and services to meet the
-										needs of Information Technology and keep
-										up with technological developments. We
-										pride ourselves on our ability to adapt,
-										adjust, modify and tailor our expertise
-										to various industries.
+										{t.header.description}
 									</p>
 									<a
 										className="btn-solid-lg page-scroll"
 										href="#"
 									>
-										DISCOVER
+										{t.header.button}
 									</a>
 								</div>
 							</div>
@@ -166,7 +175,7 @@ function App() {
 									<img
 										className="img-fluid"
 										src="images/header-teamwork.svg"
-										alt="alternative"
+										alt="Teamwork"
 									/>
 								</div>
 							</div>
@@ -179,11 +188,9 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<h2>Business Growth Services</h2>
+							<h2>{t.services.title}</h2>
 							<p className="p-heading p-large">
-								We serve small and medium sized companies in all
-								tech related industries with high quality growth
-								services which are presented below
+								{t.services.subtitle}
 							</p>
 						</div>
 					</div>
@@ -193,16 +200,14 @@ function App() {
 								<img
 									className="card-image"
 									src="images/services-icon-1.svg"
-									alt="alternative"
+									alt="Market Analysis"
 								/>
 								<div className="card-body">
 									<h4 className="card-title">
-										Market Analysis
+										{t.services.marketAnalysis.title}
 									</h4>
 									<p>
-										Our team of enthusiastic marketers will
-										analyse and evaluate how your company
-										stacks against the closest competitors
+										{t.services.marketAnalysis.description}
 									</p>
 								</div>
 							</div>
@@ -211,16 +216,14 @@ function App() {
 								<img
 									className="card-image"
 									src="images/services-icon-2.svg"
-									alt="alternative"
+									alt="Opportunity Scan"
 								/>
 								<div className="card-body">
 									<h4 className="card-title">
-										Opportunity Scan
+										{t.services.opportunityScan.title}
 									</h4>
 									<p>
-										Once the market analysis process is
-										completed our staff will search for
-										opportunities that are in reach
+										{t.services.opportunityScan.description}
 									</p>
 								</div>
 							</div>
@@ -229,14 +232,12 @@ function App() {
 								<img
 									className="card-image"
 									src="images/services-icon-3.svg"
-									alt="alternative"
+									alt="Action Plan"
 								/>
 								<div className="card-body">
-									<h4 className="card-title">Action Plan</h4>
+									<h4 className="card-title">{t.services.actionPlan.title}</h4>
 									<p>
-										With all the information in place you
-										will be presented with an action plan
-										that your company needs to follow
+										{t.services.actionPlan.description}
 									</p>
 								</div>
 							</div>
@@ -251,19 +252,16 @@ function App() {
 						<div className="col-lg-6">
 							<div className="text-container">
 								<h2>
-									Design And Plan Your Business Growth Steps
+									{t.basic1.title}
 								</h2>
 								<p>
-									Use our staff and our expertise to design
-									and plan your business growth strategy.
-									Evolo team is eager to advise you on the
-									best opportunities that you should look into
+									{t.basic1.description}
 								</p>
 								<a
 									className="btn-solid-reg popup-with-move-anim"
 									href="#details-lightbox-1"
 								>
-									LIGHTBOX
+									{t.basic1.button}
 								</a>
 							</div>
 						</div>
@@ -272,7 +270,7 @@ function App() {
 								<img
 									className="img-fluid"
 									src="images/details-1-office-worker.svg"
-									alt="alternative"
+									alt="Office worker"
 								/>
 							</div>
 						</div>
@@ -288,43 +286,30 @@ function App() {
 								<img
 									className="img-fluid"
 									src="images/details-2-office-team-work.svg"
-									alt="alternative"
+									alt="Office team work"
 								/>
 							</div>
 						</div>
 						<div className="col-lg-6">
 							<div className="text-container">
 								<h2>
-									Search For Optimization Wherever Is Possible
+									{t.basic2.title}
 								</h2>
 								<ul className="list-unstyled li-space-lg">
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											Basically well teach you step by
-											step what you need to do
-										</div>
-									</li>
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											In order to develop your company and
-											reach new heights
-										</div>
-									</li>
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											Everyone will be pleased from
-											stakeholders to employees
-										</div>
-									</li>
+									{t.basic2.items.map((item, index) => (
+										<li className="media" key={index}>
+											<i className="fas fa-check"></i>
+											<div className="media-body">
+												{item}
+											</div>
+										</li>
+									))}
 								</ul>
 								<a
 									className="btn-solid-reg popup-with-move-anim"
 									href="#details-lightbox-2"
 								>
-									LIGHTBOX
+									{t.basic2.button}
 								</a>
 							</div>
 						</div>
@@ -339,7 +324,7 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<button
-							title="Close (Esc)"
+							title={t.lightbox.close}
 							type="button"
 							className="mfp-close x-button"
 						>
@@ -350,72 +335,41 @@ function App() {
 								<img
 									className="img-fluid"
 									src="images/details-lightbox-1.svg"
-									alt="alternative"
+									alt="Design and plan details"
 								/>
 							</div>
 						</div>
 						<div className="col-lg-4">
-							<h3>Design And Plan</h3>
+							<h3>{t.lightbox.designPlan.title}</h3>
 							<hr />
-							<h5>Core feature</h5>
+							<h5>{t.lightbox.designPlan.coreFeature}</h5>
 							<p>
-								The emailing module basically will speed up your
-								email marketing operations while offering more
-								subscriber control.
+								{t.lightbox.designPlan.description1}
 							</p>
 							<p>
-								Do you need to build lists for your email
-								campaigns? It just got easier with Evolo.
+								{t.lightbox.designPlan.description2}
 							</p>
 							<ul className="list-unstyled li-space-lg">
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										List building framework
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Easy database browsing
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										User administration
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Automate user signup
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Quick formatting tools
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Fast email checking
-									</div>
-								</li>
+								{t.lightbox.designPlan.features.map((feature, index) => (
+									<li className="media" key={index}>
+										<i className="fas fa-check"></i>
+										<div className="media-body">
+											{feature}
+										</div>
+									</li>
+								))}
 							</ul>
 							<a
 								className="btn-solid-reg mfp-close page-scroll"
 								href="#request"
 							>
-								REQUEST
+								{t.lightbox.requestBtn}
 							</a>{" "}
 							<a
 								className="btn-outline-reg mfp-close as-button"
 								href="#screenshots"
 							>
-								BACK
+								{t.lightbox.backBtn}
 							</a>
 						</div>
 					</div>
@@ -429,7 +383,7 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<button
-							title="Close (Esc)"
+							title={t.lightbox.close}
 							type="button"
 							className="mfp-close x-button"
 						>
@@ -440,72 +394,41 @@ function App() {
 								<img
 									className="img-fluid"
 									src="images/details-lightbox-2.svg"
-									alt="alternative"
+									alt="Search to optimize details"
 								/>
 							</div>
 						</div>
 						<div className="col-lg-4">
-							<h3>Search To Optimize</h3>
+							<h3>{t.lightbox.searchOptimize.title}</h3>
 							<hr />
-							<h5>Core feature</h5>
+							<h5>{t.lightbox.designPlan.coreFeature}</h5>
 							<p>
-								The emailing module basically will speed up your
-								email marketing operations while offering more
-								subscriber control.
+								{t.lightbox.designPlan.description1}
 							</p>
 							<p>
-								Do you need to build lists for your email
-								campaigns? It just got easier with Evolo.
+								{t.lightbox.designPlan.description2}
 							</p>
 							<ul className="list-unstyled li-space-lg">
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										List building framework
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Easy database browsing
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										User administration
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Automate user signup
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Quick formatting tools
-									</div>
-								</li>
-								<li className="media">
-									<i className="fas fa-check"></i>
-									<div className="media-body">
-										Fast email checking
-									</div>
-								</li>
+								{t.lightbox.designPlan.features.map((feature, index) => (
+									<li className="media" key={index}>
+										<i className="fas fa-check"></i>
+										<div className="media-body">
+											{feature}
+										</div>
+									</li>
+								))}
 							</ul>
 							<a
 								className="btn-solid-reg mfp-close page-scroll"
 								href="#request"
 							>
-								REQUEST
+								{t.lightbox.requestBtn}
 							</a>{" "}
 							<a
 								className="btn-outline-reg mfp-close as-button"
 								href="#screenshots"
 							>
-								BACK
+								{t.lightbox.backBtn}
 							</a>
 						</div>
 					</div>
@@ -516,11 +439,9 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<h2>Multiple Pricing Options</h2>
+							<h2>{t.pricing.title}</h2>
 							<p className="p-heading p-large">
-								Weve prepared pricing plans for all budgets so
-								you can get started right away. Theyre great for
-								small companies and large organizations
+								{t.pricing.subtitle}
 							</p>
 						</div>
 					</div>
@@ -528,46 +449,46 @@ function App() {
 						<div className="col-lg-12">
 							<div className="card">
 								<div className="card-body">
-									<div className="card-title">STARTER</div>
+									<div className="card-title">{t.pricing.plans.starter.name}</div>
 									<div className="card-subtitle">
-										Just to see what can be achieved
+										{t.pricing.plans.starter.subtitle}
 									</div>
 									<hr className="cell-divide-hr" />
 									<div className="price">
 										<span className="currency">$</span>
 										<span className="value">199</span>
-										<div className="frequency">monthly</div>
+										<div className="frequency">{t.pricing.monthly}</div>
 									</div>
 									<hr className="cell-divide-hr" />
 									<ul className="list-unstyled li-space-lg">
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												Improve Your Email Marketing
+												{t.pricing.features[0]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												User And Admin Rights Control
+												{t.pricing.features[1]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-times"></i>
 											<div className="media-body">
-												List Building And Cleaning
+												{t.pricing.features[2]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-times"></i>
 											<div className="media-body">
-												Collected Data Management
+												{t.pricing.features[3]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-times"></i>
 											<div className="media-body">
-												More Planning And Evaluation
+												{t.pricing.features[4]}
 											</div>
 										</li>
 									</ul>
@@ -576,7 +497,7 @@ function App() {
 											className="btn-solid-reg page-scroll"
 											href="#request"
 										>
-											REQUEST
+											{t.pricing.requestBtn}
 										</a>
 									</div>
 								</div>
@@ -584,46 +505,46 @@ function App() {
 
 							<div className="card">
 								<div className="card-body">
-									<div className="card-title">MEDIUM</div>
+									<div className="card-title">{t.pricing.plans.medium.name}</div>
 									<div className="card-subtitle">
-										Very appropriate for the short term
+										{t.pricing.plans.medium.subtitle}
 									</div>
 									<hr className="cell-divide-hr" />
 									<div className="price">
 										<span className="currency">$</span>
 										<span className="value">299</span>
-										<div className="frequency">monthly</div>
+										<div className="frequency">{t.pricing.monthly}</div>
 									</div>
 									<hr className="cell-divide-hr" />
 									<ul className="list-unstyled li-space-lg">
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												Improve Your Email Marketing
+												{t.pricing.features[0]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												User And Admin Rights Control
+												{t.pricing.features[1]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												List Building And Cleaning
+												{t.pricing.features[2]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-check"></i>
 											<div className="media-body">
-												Collected Data Management
+												{t.pricing.features[3]}
 											</div>
 										</li>
 										<li className="media">
 											<i className="fas fa-times"></i>
 											<div className="media-body">
-												More Planning And Evaluation
+												{t.pricing.features[4]}
 											</div>
 										</li>
 									</ul>
@@ -632,7 +553,7 @@ function App() {
 											className="btn-solid-reg page-scroll"
 											href="#request"
 										>
-											REQUEST
+											{t.pricing.requestBtn}
 										</a>
 									</div>
 								</div>
@@ -640,58 +561,36 @@ function App() {
 
 							<div className="card">
 								<div className="label">
-									<p className="best-value">Best Value</p>
+									<p className="best-value">{t.pricing.bestValue}</p>
 								</div>
 								<div className="card-body">
-									<div className="card-title">COMPLETE</div>
+									<div className="card-title">{t.pricing.plans.complete.name}</div>
 									<div className="card-subtitle">
-										Must have for large companies
+										{t.pricing.plans.complete.subtitle}
 									</div>
 									<hr className="cell-divide-hr" />
 									<div className="price">
 										<span className="currency">$</span>
 										<span className="value">399</span>
-										<div className="frequency">monthly</div>
+										<div className="frequency">{t.pricing.monthly}</div>
 									</div>
 									<hr className="cell-divide-hr" />
 									<ul className="list-unstyled li-space-lg">
-										<li className="media">
-											<i className="fas fa-check"></i>
-											<div className="media-body">
-												Improve Your Email Marketing
-											</div>
-										</li>
-										<li className="media">
-											<i className="fas fa-check"></i>
-											<div className="media-body">
-												User And Admin Rights Control
-											</div>
-										</li>
-										<li className="media">
-											<i className="fas fa-check"></i>
-											<div className="media-body">
-												List Building And Cleaning
-											</div>
-										</li>
-										<li className="media">
-											<i className="fas fa-check"></i>
-											<div className="media-body">
-												Collected Data Management
-											</div>
-										</li>
-										<li className="media">
-											<i className="fas fa-check"></i>
-											<div className="media-body">
-												More Planning And Evaluation
-											</div>
-										</li>
+										{t.pricing.features.map((feature, index) => (
+											<li className="media" key={index}>
+												<i className="fas fa-check"></i>
+												<div className="media-body">
+													{feature}
+												</div>
+											</li>
+										))}
 									</ul>
 									<div className="button-wrapper">
 										<a
 											className="btn-solid-reg page-scroll"
 											href="#request"
 										>
-											REQUEST
+											{t.pricing.requestBtn}
 										</a>
 									</div>
 								</div>
@@ -707,53 +606,23 @@ function App() {
 						<div className="col-lg-6">
 							<div className="text-container">
 								<h2>
-									Fill The Following Form To Request A Meeting
+									{t.requestForm.title}
 								</h2>
 								<p>
-									Evolo is one of the easiest and feature
-									packed marketing automation apps in the
-									market. Discover what it can do for your
-									business organization right away.
+									{t.requestForm.description}
 								</p>
 								<ul className="list-unstyled li-space-lg">
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											<strong className="blue">
-												Automate your marketing
-											</strong>{" "}
-											activities and get results today
-										</div>
-									</li>
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											<strong className="blue">
-												Interact with all your
-											</strong>{" "}
-											targeted customers at a personal
-											level
-										</div>
-									</li>
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											<strong className="blue">
-												Convince them to buy
-											</strong>{" "}
-											your companys awesome products
-										</div>
-									</li>
-									<li className="media">
-										<i className="fas fa-check"></i>
-										<div className="media-body">
-											<strong className="blue">
-												Save precious time
-											</strong>{" "}
-											and invest it where you need it the
-											most
-										</div>
-									</li>
+									{t.requestForm.benefits.map((benefit, index) => (
+										<li className="media" key={index}>
+											<i className="fas fa-check"></i>
+											<div className="media-body">
+												<strong className="blue">
+													{benefit.bold}
+												</strong>{" "}
+												{benefit.text}
+											</div>
+										</li>
+									))}
 								</ul>
 							</div>
 						</div>
@@ -776,7 +645,7 @@ function App() {
 											className="label-control"
 											htmlFor="rname"
 										>
-											Full name
+											{t.requestForm.fullName}
 										</label>
 										<div className="help-block with-errors"></div>
 									</div>
@@ -792,7 +661,7 @@ function App() {
 											className="label-control"
 											htmlFor="remail"
 										>
-											Email
+											{t.requestForm.email}
 										</label>
 										<div className="help-block with-errors"></div>
 									</div>
@@ -808,7 +677,7 @@ function App() {
 											className="label-control"
 											htmlFor="rphone"
 										>
-											Phone
+											{t.requestForm.phone}
 										</label>
 										<div className="help-block with-errors"></div>
 									</div>
@@ -824,25 +693,25 @@ function App() {
 												disabled
 												selected
 											>
-												Interested in...
+												{t.requestForm.interestedIn}
 											</option>
 											<option
 												className="select-option"
-												value="Personal Loan"
+												value="Starter"
 											>
-												Starter
+												{t.requestForm.options.starter}
 											</option>
 											<option
 												className="select-option"
-												value="Car Loan"
+												value="Medium"
 											>
-												Medium
+												{t.requestForm.options.medium}
 											</option>
 											<option
 												className="select-option"
-												value="House Loan"
+												value="Complete"
 											>
-												Complete
+												{t.requestForm.options.complete}
 											</option>
 										</select>
 										<div className="help-block with-errors"></div>
@@ -855,14 +724,15 @@ function App() {
 											name="rterms"
 											required
 										/>
-										I agree with Evolos stated{" "}
+										{t.requestForm.agreementText}{" "}
 										<a href="privacy-policy.html">
-											Privacy Policy
+											{t.requestForm.privacyPolicy}
 										</a>{" "}
-										and{" "}
+										{t.requestForm.and}{" "}
 										<a href="terms-conditions.html">
-											Terms & Conditions
-										</a>
+											{t.requestForm.termsConditions}
+										</a>{" "}
+										{t.requestForm.ofBlueStar}
 										<div className="help-block with-errors"></div>
 									</div>
 									<div className="form-group">
@@ -870,7 +740,7 @@ function App() {
 											type="submit"
 											className="form-control-submit-button"
 										>
-											REQUEST
+											{t.requestForm.submitBtn}
 										</button>
 									</div>
 									<div className="form-message">
@@ -890,7 +760,7 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<h2>Check Out The Video</h2>
+							<h2>{t.video.title}</h2>
 						</div>
 					</div>
 					<div className="row">
@@ -905,7 +775,7 @@ function App() {
 										<img
 											className="img-fluid"
 											src="images/video-frame.svg"
-											alt="alternative"
+											alt="Video"
 										/>
 										<span className="video-play-button">
 											<span></span>
@@ -915,10 +785,9 @@ function App() {
 							</div>
 
 							<p>
-								This video will show you a case study for one of
-								our <strong>Major Customers</strong> and will
-								help you understand why your startup needs Evolo
-								in this highly competitive market
+								{t.video.description}{" "}
+								<strong>{t.video.majorCustomers}</strong>{" "}
+								{t.video.description2}
 							</p>
 						</div>
 					</div>
@@ -933,86 +802,35 @@ function App() {
 								<img
 									className="img-fluid"
 									src="images/testimonials-2-men-talking.svg"
-									alt="alternative"
+									alt="Testimonials"
 								/>
 							</div>
 						</div>
 						<div className="col-lg-6">
-							<h2>Testimonials</h2>
+							<h2>{t.testimonials.title}</h2>
 
 							<div className="slider-container">
 								<div className="swiper-container card-slider">
 									<div className="swiper-wrapper">
-										<div className="swiper-slide">
-											<div className="card">
-												<img
-													className="card-image"
-													src="images/testimonial-1.svg"
-													alt="alternative"
-												/>
-												<div className="card-body">
-													<p className="testimonial-text">
-														I just finished my trial
-														period and was so amazed
-														with the support and
-														results that I purchased
-														Evolo right away at the
-														special price.
-													</p>
-													<p className="testimonial-author">
-														Jude Thorn - Designer
-													</p>
+										{t.testimonials.items.map((testimonial, index) => (
+											<div className="swiper-slide" key={index}>
+												<div className="card">
+													<img
+														className="card-image"
+														src={`images/testimonial-${index + 1}.svg`}
+														alt={testimonial.author}
+													/>
+													<div className="card-body">
+														<p className="testimonial-text">
+															{testimonial.text}
+														</p>
+														<p className="testimonial-author">
+															{testimonial.author} - {testimonial.role}
+														</p>
+													</div>
 												</div>
 											</div>
-										</div>
-
-										<div className="swiper-slide">
-											<div className="card">
-												<img
-													className="card-image"
-													src="images/testimonial-2.svg"
-													alt="alternative"
-												/>
-												<div className="card-body">
-													<p className="testimonial-text">
-														Evolo has always helped
-														or startup to position
-														itself in the highly
-														competitive market of
-														mobile applications. You
-														will not regret using
-														it!
-													</p>
-													<p className="testimonial-author">
-														Marsha Singer -
-														Developer
-													</p>
-												</div>
-											</div>
-										</div>
-
-										<div className="swiper-slide">
-											<div className="card">
-												<img
-													className="card-image"
-													src="images/testimonial-3.svg"
-													alt="alternative"
-												/>
-												<div className="card-body">
-													<p className="testimonial-text">
-														Love their services and
-														was so amazed with the
-														support and results that
-														I purchased Evolo for
-														two years in a row. They
-														are awesome.
-													</p>
-													<p className="testimonial-author">
-														Roy Smith - Marketer
-													</p>
-												</div>
-											</div>
-										</div>
+										))}
 									</div>
 
 									<div className="swiper-button-next"></div>
@@ -1028,128 +846,43 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<h2>About The Team</h2>
+							<h2>{t.team.title}</h2>
 							<p className="p-heading p-large">
-								Meat our team of specialized marketers and
-								business developers which will help you research
-								new products and launch them in new emerging
-								markets
+								{t.team.subtitle}
 							</p>
 						</div>
 					</div>
 					<div className="row">
 						<div className="col-lg-12">
-							<div className="team-member">
-								<div className="image-wrapper">
-									<img
-										className="img-fluid"
-										src="images/team-member-1.svg"
-										alt="alternative"
-									/>
+							{t.team.members.map((member, index) => (
+								<div className="team-member" key={index}>
+									<div className="image-wrapper">
+										<img
+											className="img-fluid"
+											src={`images/team-member-${index + 1}.svg`}
+											alt={member.name}
+										/>
+									</div>
+									<p className="p-large">
+										<strong>{member.name}</strong>
+									</p>
+									<p className="job-title">{member.role}</p>
+									<span className="social-icons">
+										<span className="fa-stack">
+											<a href="#your-link">
+												<i className="fas fa-circle fa-stack-2x facebook"></i>
+												<i className="fab fa-facebook-f fa-stack-1x"></i>
+											</a>
+										</span>
+										<span className="fa-stack">
+											<a href="#your-link">
+												<i className="fas fa-circle fa-stack-2x twitter"></i>
+												<i className="fab fa-twitter fa-stack-1x"></i>
+											</a>
+										</span>
+									</span>
 								</div>
-								<p className="p-large">
-									<strong>Lacy Whitelong</strong>
-								</p>
-								<p className="job-title">Business Developer</p>
-								<span className="social-icons">
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x facebook"></i>
-											<i className="fab fa-facebook-f fa-stack-1x"></i>
-										</a>
-									</span>
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x twitter"></i>
-											<i className="fab fa-twitter fa-stack-1x"></i>
-										</a>
-									</span>
-								</span>
-							</div>
-
-							<div className="team-member">
-								<div className="image-wrapper">
-									<img
-										className="img-fluid"
-										src="images/team-member-2.svg"
-										alt="alternative"
-									/>
-								</div>
-								<p className="p-large">
-									<strong>Chris Brown</strong>
-								</p>
-								<p className="job-title">Online Marketer</p>
-								<span className="social-icons">
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x facebook"></i>
-											<i className="fab fa-facebook-f fa-stack-1x"></i>
-										</a>
-									</span>
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x twitter"></i>
-											<i className="fab fa-twitter fa-stack-1x"></i>
-										</a>
-									</span>
-								</span>
-							</div>
-
-							<div className="team-member">
-								<div className="image-wrapper">
-									<img
-										className="img-fluid"
-										src="images/team-member-3.svg"
-										alt="alternative"
-									/>
-								</div>
-								<p className="p-large">
-									<strong>Sheila Zimerman</strong>
-								</p>
-								<p className="job-title">Software Engineer</p>
-								<span className="social-icons">
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x facebook"></i>
-											<i className="fab fa-facebook-f fa-stack-1x"></i>
-										</a>
-									</span>
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x twitter"></i>
-											<i className="fab fa-twitter fa-stack-1x"></i>
-										</a>
-									</span>
-								</span>
-							</div>
-
-							<div className="team-member">
-								<div className="image-wrapper">
-									<img
-										className="img-fluid"
-										src="images/team-member-4.svg"
-										alt="alternative"
-									/>
-								</div>
-								<p className="p-large">
-									<strong>Mary Villalonga</strong>
-								</p>
-								<p className="job-title">Product Manager</p>
-								<span className="social-icons">
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x facebook"></i>
-											<i className="fab fa-facebook-f fa-stack-1x"></i>
-										</a>
-									</span>
-									<span className="fa-stack">
-										<a href="#your-link">
-											<i className="fas fa-circle fa-stack-2x twitter"></i>
-											<i className="fab fa-twitter fa-stack-1x"></i>
-										</a>
-									</span>
-								</span>
-							</div>
+							))}
 						</div>
 					</div>
 				</div>
@@ -1159,31 +892,29 @@ function App() {
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
-							<h2>Contact Information</h2>
+							<h2>{t.contact.title}</h2>
 							<ul className="list-unstyled li-space-lg">
 								<li className="address">
-									Dont hesitate to give us a call or send us a
-									contact form message
+									{t.contact.subtitle}
 								</li>
 								<li>
-									<i className="fas fa-map-marker-alt"></i>236
-									Thai Phien Ward 8, District 11, Ho Chi
-									Minh,VN
+									<i className="fas fa-map-marker-alt"></i>
+									{t.contact.address}
 								</li>
 								<li>
 									<i className="fas fa-phone"></i>
 									<a
 										className="turquoise"
-										href="tel:003024630820"
+										href="tel:+84927394039"
 									>
-										+84935486712
+										+84927394039
 									</a>
 								</li>
 								<li>
 									<i className="fas fa-envelope"></i>
 									<a
 										className="turquoise"
-										href="mailto:office@evolo.com"
+										href="mailto:office@bluestar.com"
 									>
 										office@bluestar.com
 									</a>
@@ -1195,8 +926,8 @@ function App() {
 						<div className="col-lg-6">
 							<div className="map-responsive">
 								<iframe
-									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100939.98555098464!2d-122.507640204439!3d37.757814996609724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sro!4v1498231462606"
-									allowfullscreen
+									src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4!2d106.6679!3d10.7731!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f38a5c3f5f5%3A0x1234567890abcdef!2zNjY2IEJhIFRow6FuZyBIYWksIFBoxrDhu51uZyAxNCwgUXXhuq1uIDEwLCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2svn!4v1701700000000"
+									allowFullScreen
 								></iframe>
 							</div>
 						</div>
@@ -1217,7 +948,7 @@ function App() {
 										className="label-control"
 										htmlFor="cname"
 									>
-										Name
+										{t.contact.name}
 									</label>
 									<div className="help-block with-errors"></div>
 								</div>
@@ -1232,7 +963,7 @@ function App() {
 										className="label-control"
 										htmlFor="cemail"
 									>
-										Email
+										{t.contact.email}
 									</label>
 									<div className="help-block with-errors"></div>
 								</div>
@@ -1246,7 +977,7 @@ function App() {
 										className="label-control"
 										htmlFor="cmessage"
 									>
-										Your message
+										{t.contact.message}
 									</label>
 									<div className="help-block with-errors"></div>
 								</div>
@@ -1257,14 +988,15 @@ function App() {
 										value="Agreed-to-Terms"
 										required
 									/>
-									I have read and agree with Evolos stated{" "}
+									{t.contact.agreementText}{" "}
 									<a href="privacy-policy.html">
-										Privacy Policy
+										{t.contact.privacyPolicy}
 									</a>{" "}
-									and{" "}
+									{t.contact.and}{" "}
 									<a href="terms-conditions.html">
-										Terms Conditions
-									</a>
+										{t.contact.termsConditions}
+									</a>{" "}
+									{t.contact.ofBlueStar}
 									<div className="help-block with-errors"></div>
 								</div>
 								<div className="form-group">
@@ -1272,7 +1004,7 @@ function App() {
 										type="submit"
 										className="form-control-submit-button"
 									>
-										SUBMIT MESSAGE
+										{t.contact.submitBtn}
 									</button>
 								</div>
 								<div className="form-message">
@@ -1292,31 +1024,20 @@ function App() {
 					<div className="row">
 						<div className="col-md-4">
 							<div className="footer-col">
-								<h4>About BlueStar</h4>
+								<h4>{t.footer.aboutTitle}</h4>
 								<p>
-									Were passionate about offering some of the
-									best business growth services for startups
+									{t.footer.aboutText}
 								</p>
 							</div>
 						</div>
 						<div className="col-md-4">
 							<div className="footer-col middle">
-								<h4>Important Links</h4>
-								{/* <ul className="list-unstyled li-space-lg">
-                            <li className="media">
-                                <i className="fas fa-square"></i>
-                                <div className="media-body">Our business partners <a className="turquoise" href="#your-link">startupguide.com</a></div>
-                            </li>
-                            <li className="media">
-                                <i className="fas fa-square"></i>
-                                <div className="media-body">Read our <a className="turquoise" href="terms-conditions.html">Terms & Conditions</a>, <a className="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
-                            </li>
-                        </ul> */}
+								<h4>{t.footer.linksTitle}</h4>
 							</div>
 						</div>
 						<div className="col-md-4">
 							<div className="footer-col last">
-								<h4>Social Media</h4>
+								<h4>{t.footer.socialTitle}</h4>
 								<span className="fa-stack">
 									<a href="#your-link">
 										<i className="fas fa-circle fa-stack-2x"></i>
@@ -1358,9 +1079,9 @@ function App() {
 					<div className="row">
 						<div className="col-lg-12">
 							<p className="p-small">
-								Copyright © 2020{" "}
-								<a href="https://inovatik.com">Inovatik</a> -
-								All rights reserved
+								{t.footer.copyright}{" "}
+								<a href="https://inovatik.com">Inovatik</a>{" "}
+								{t.footer.allRightsReserved}
 							</p>
 						</div>
 					</div>
