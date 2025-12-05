@@ -18,8 +18,40 @@ const en = {
 	// Header
 	header: {
 		title: "About Us",
-		description: "BLUESTAR, an IT outsourcing company with over 10 years of experience, provides consulting and software services and technology solutions to various clients across North America, Australia, Korea, Japan, Singapore and Vietnam. At BLUESTAR, we have over 100 experts who specialize in technological advancements and innovations. We provide our products and services to meet the needs of Information Technology and keep up with technological developments. We pride ourselves on our ability to adapt, adjust, modify and tailor our expertise to various industries.",
+		description: "BLUESTAR is an IT outsourcing company with over 10 years of experience, providing software services and technology solutions to clients across North America, Japan, Korea, Singapore, Australia and Vietnam.",
 		button: "DISCOVER",
+	},
+
+	// Hero Section
+	hero: {
+		heading1: "Building",
+		heading2: "Digital Solutions",
+		heading3: "Delivering Trust",
+		ctaPrimary: "Start Your Project",
+		ctaSecondary: "Our Services",
+		stats: {
+			years: "Years",
+			experts: "Experts",
+			projects: "Projects"
+		},
+		features: {
+			safety: {
+				title: "Quality First",
+				description: "Zero defect track record"
+			},
+			global: {
+				title: "Global Reach",
+				description: "JP, VN, US, AU, KR, SG"
+			},
+			delivery: {
+				title: "On-Time Delivery",
+				description: "98% projects on schedule"
+			},
+			support: {
+				title: "24/7 Support",
+				description: "Always here to help you"
+			}
+		}
 	},
 
 	// Services
@@ -181,28 +213,160 @@ const en = {
 
 	// Contact
 	contact: {
+		badge: "Contact Us",
 		title: "Contact Information",
 		subtitle: "Don't hesitate to give us a call or send us a contact form message",
 		address: "666/10/1-3-5 Ba Thang Hai, Dien Hong Ward, Ho Chi Minh City, Vietnam",
+		officeAddress: "Office Address",
+		emailUs: "Email Us",
+		callUs: "Call Us",
+		connectWithUs: "Connect with us",
+		viewOnMap: "View on Google Maps",
+		formTitle: "Request a Consultation",
+		formSubtitle: "Fill out the form and we'll get back to you within 24 hours",
 		name: "Name",
 		email: "Email",
+		company: "Company",
+		companyPlaceholder: "Your company name",
+		phone: "Phone",
+		phonePlaceholder: "+84 xxx xxx xxx",
+		serviceInterested: "Service Interested",
+		selectService: "Select a service",
 		message: "Your message",
+		messagePlaceholder: "Tell us about your project requirements...",
+		submitBtn: "SUBMIT MESSAGE",
+		thankYou: "Thank you for your inquiry. We will contact you shortly.",
 		agreementText: "I have read and agree with",
 		privacyPolicy: "Privacy Policy",
 		and: "and",
 		termsConditions: "Terms Conditions",
 		ofBlueStar: "of BlueStar",
-		submitBtn: "SUBMIT MESSAGE",
+		services: {
+			customSoftware: "Custom Software Development",
+			itOutsourcing: "IT Outsourcing",
+			systemIntegration: "System Integration",
+			cloudSolutions: "Cloud Solutions",
+			maintenance: "Maintenance & Support",
+			consulting: "IT Consulting"
+		}
+	},
+
+	// WhyChooseUs Section
+	whyChooseUs: {
+		badge: "Why Choose Us",
+		title: "The Bluestar",
+		titleHighlight: "Difference",
+		subtitle: "What sets us apart from other software companies in Vietnam — Excellence in every detail.",
+		reasons: [
+			{
+				title: "International Quality Standards",
+				description: "We deliver software that meets global standards with meticulous attention to detail and best practices."
+			},
+			{
+				title: "Reliable On-Time Delivery",
+				description: "Our agile methodology ensures every milestone is met. We understand time-to-market is critical for success."
+			},
+			{
+				title: "Scalable Solutions",
+				description: "Build software that grows with your business. Our architectures are designed for long-term success."
+			},
+			{
+				title: "Clear Communication",
+				description: "Multilingual teams ensure nothing is lost in translation. Regular updates keep you informed at every stage."
+			}
+		],
+		stats: {
+			projects: "Projects Completed",
+			engineers: "Expert Engineers",
+			years: "Years Experience",
+			satisfaction: "Client Satisfaction"
+		},
+		cta: "Start Your Project Today"
+	},
+
+	// About Section
+	about: {
+		badge: "About Us",
+		title: "Building Tomorrow with",
+		titleHighlight: "Digital Innovation",
+		description2: "Our commitment to excellence, combined with deep understanding of international markets, makes us the preferred partner for companies seeking reliable software development and IT consulting services.",
+		yearsOf: "Years of",
+		excellence: "Excellence",
+		clientSatisfaction: "Client Satisfaction",
+		features: [
+			{
+				title: "High Quality Standards",
+				description: "We deliver software that meets international standards with precision and attention to detail."
+			},
+			{
+				title: "On-Time Delivery",
+				description: "Our agile methodology ensures deadlines are met without compromising quality."
+			},
+			{
+				title: "Expert Team",
+				description: "100+ experienced engineers and consultants skilled in modern technologies."
+			},
+			{
+				title: "Global Reach",
+				description: "Serving clients across Japan, US, Korea, Singapore, Australia and Vietnam."
+			}
+		],
+		cta: "Partner With Us"
+	},
+
+	// Services detail
+	servicesDetail: {
+		badge: "Our Services",
+		items: [
+			{
+				title: "Custom Software Development",
+				description: "End-to-end software development from concept to deployment. We build scalable web, mobile, and enterprise applications tailored to your needs."
+			},
+			{
+				title: "IT Outsourcing",
+				description: "Dedicated development teams for your projects. Access top Vietnamese talent with international quality standards."
+			},
+			{
+				title: "System Integration",
+				description: "Seamlessly connect your business systems and applications. We specialize in API development, data migration, and enterprise integration."
+			},
+			{
+				title: "Cloud Solutions",
+				description: "Cloud architecture, migration, and DevOps services. Optimize your infrastructure with AWS, Azure, and Google Cloud expertise."
+			},
+			{
+				title: "Maintenance & Support",
+				description: "24/7 technical support and system maintenance. Keep your applications running smoothly with our dedicated support team."
+			},
+			{
+				title: "IT Consulting",
+				description: "Strategic technology consulting for digital transformation. Leverage our expertise to optimize your business processes."
+			}
+		],
+		learnMore: "Learn More"
 	},
 
 	// Footer
 	footer: {
 		aboutTitle: "About BlueStar",
 		aboutText: "We're passionate about offering some of the best business growth services for startups",
-		linksTitle: "Important Links",
+		linksTitle: "Quick Links",
+		servicesTitle: "Services",
+		contactTitle: "Contact",
 		socialTitle: "Social Media",
+		ctaTitle: "Ready to start your project?",
+		ctaSubtitle: "Let's build something extraordinary together",
+		ctaButton: "Get a Free Quote",
 		copyright: "Copyright © 2020",
 		allRightsReserved: "- All rights reserved",
+		privacyPolicy: "Privacy Policy",
+		termsOfService: "Terms of Service",
+		services: [
+			"Custom Software Development",
+			"IT Outsourcing",
+			"System Integration",
+			"Cloud Solutions"
+		]
 	},
 };
 

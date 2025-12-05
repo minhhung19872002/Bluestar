@@ -18,8 +18,40 @@ const vi = {
 	// Header
 	header: {
 		title: "Về Chúng Tôi",
-		description: "BLUESTAR, một công ty gia công phần mềm với hơn 10 năm kinh nghiệm, cung cấp dịch vụ tư vấn, phần mềm và các giải pháp công nghệ cho nhiều khách hàng tại Bắc Mỹ, Úc, Hàn Quốc, Nhật Bản, Singapore và Việt Nam. Tại BLUESTAR, chúng tôi có hơn 100 chuyên gia chuyên về các tiến bộ và đổi mới công nghệ. Chúng tôi cung cấp sản phẩm và dịch vụ đáp ứng nhu cầu Công nghệ Thông tin và theo kịp các xu hướng công nghệ mới nhất. Chúng tôi tự hào về khả năng thích ứng, điều chỉnh và tùy biến chuyên môn phù hợp với nhiều ngành công nghiệp khác nhau.",
+		description: "BLUESTAR là công ty gia công phần mềm với hơn 10 năm kinh nghiệm, cung cấp dịch vụ phần mềm và giải pháp công nghệ cho khách hàng tại Bắc Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
 		button: "KHÁM PHÁ",
+	},
+
+	// Hero Section
+	hero: {
+		heading1: "Xây Dựng",
+		heading2: "Giải Pháp Số",
+		heading3: "Mang Lại Niềm Tin",
+		ctaPrimary: "Bắt Đầu Dự Án",
+		ctaSecondary: "Dịch Vụ Của Chúng Tôi",
+		stats: {
+			years: "Năm",
+			experts: "Chuyên Gia",
+			projects: "Dự Án"
+		},
+		features: {
+			safety: {
+				title: "Chất Lượng Là Số 1",
+				description: "Hồ sơ không lỗi"
+			},
+			global: {
+				title: "Phạm Vi Toàn Cầu",
+				description: "JP, VN, US, AU, KR, SG"
+			},
+			delivery: {
+				title: "Giao Hàng Đúng Hạn",
+				description: "98% dự án đúng tiến độ"
+			},
+			support: {
+				title: "Hỗ Trợ 24/7",
+				description: "Luôn sẵn sàng hỗ trợ bạn"
+			}
+		}
 	},
 
 	// Services
@@ -181,28 +213,160 @@ const vi = {
 
 	// Contact
 	contact: {
+		badge: "Liên Hệ",
 		title: "Thông Tin Liên Hệ",
 		subtitle: "Đừng ngần ngại gọi cho chúng tôi hoặc gửi tin nhắn qua biểu mẫu liên hệ",
 		address: "666/10/1-3-5 Ba Tháng Hai, Phường Diên Hồng, TP Hồ Chí Minh, Việt Nam",
+		officeAddress: "Địa Chỉ Văn Phòng",
+		emailUs: "Gửi Email",
+		callUs: "Gọi Điện",
+		connectWithUs: "Kết nối với chúng tôi",
+		viewOnMap: "Xem trên Google Maps",
+		formTitle: "Yêu Cầu Tư Vấn",
+		formSubtitle: "Điền biểu mẫu và chúng tôi sẽ liên hệ lại trong vòng 24 giờ",
 		name: "Họ và tên",
 		email: "Email",
+		company: "Công ty",
+		companyPlaceholder: "Tên công ty của bạn",
+		phone: "Số điện thoại",
+		phonePlaceholder: "+84 xxx xxx xxx",
+		serviceInterested: "Dịch vụ quan tâm",
+		selectService: "Chọn một dịch vụ",
 		message: "Tin nhắn của bạn",
+		messagePlaceholder: "Cho chúng tôi biết về yêu cầu dự án của bạn...",
+		submitBtn: "GỬI TIN NHẮN",
+		thankYou: "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm nhất.",
 		agreementText: "Tôi đã đọc và đồng ý với",
 		privacyPolicy: "Chính Sách Bảo Mật",
 		and: "và",
 		termsConditions: "Điều Khoản Điều Kiện",
 		ofBlueStar: "của BlueStar",
-		submitBtn: "GỬI TIN NHẮN",
+		services: {
+			customSoftware: "Phát Triển Phần Mềm Tùy Chỉnh",
+			itOutsourcing: "Gia Công CNTT",
+			systemIntegration: "Tích Hợp Hệ Thống",
+			cloudSolutions: "Giải Pháp Đám Mây",
+			maintenance: "Bảo Trì & Hỗ Trợ",
+			consulting: "Tư Vấn CNTT"
+		}
+	},
+
+	// WhyChooseUs Section
+	whyChooseUs: {
+		badge: "Tại Sao Chọn Chúng Tôi",
+		title: "Sự Khác Biệt",
+		titleHighlight: "Bluestar",
+		subtitle: "Điều khiến chúng tôi khác biệt so với các công ty phần mềm khác tại Việt Nam — Xuất sắc trong từng chi tiết.",
+		reasons: [
+			{
+				title: "Tiêu Chuẩn Chất Lượng Quốc Tế",
+				description: "Chúng tôi cung cấp phần mềm đạt tiêu chuẩn toàn cầu với sự chú ý tỉ mỉ đến chi tiết và quy trình tốt nhất."
+			},
+			{
+				title: "Giao Hàng Đúng Hạn",
+				description: "Phương pháp agile đảm bảo mọi cột mốc được đáp ứng. Chúng tôi hiểu thời gian ra thị trường rất quan trọng."
+			},
+			{
+				title: "Giải Pháp Mở Rộng",
+				description: "Xây dựng phần mềm phát triển cùng doanh nghiệp của bạn. Kiến trúc được thiết kế cho thành công lâu dài."
+			},
+			{
+				title: "Giao Tiếp Rõ Ràng",
+				description: "Đội ngũ đa ngôn ngữ đảm bảo không có gì bị mất trong dịch thuật. Cập nhật thường xuyên giữ bạn nắm bắt mọi giai đoạn."
+			}
+		],
+		stats: {
+			projects: "Dự Án Hoàn Thành",
+			engineers: "Kỹ Sư Chuyên Gia",
+			years: "Năm Kinh Nghiệm",
+			satisfaction: "Khách Hàng Hài Lòng"
+		},
+		cta: "Bắt Đầu Dự Án Ngay"
+	},
+
+	// About Section
+	about: {
+		badge: "Về Chúng Tôi",
+		title: "Xây Dựng Tương Lai với",
+		titleHighlight: "Đổi Mới Số",
+		description2: "Cam kết xuất sắc cùng hiểu biết sâu sắc về thị trường quốc tế khiến chúng tôi trở thành đối tác ưu tiên cho các công ty tìm kiếm dịch vụ phát triển phần mềm và tư vấn CNTT đáng tin cậy.",
+		yearsOf: "Năm",
+		excellence: "Xuất Sắc",
+		clientSatisfaction: "Khách Hàng Hài Lòng",
+		features: [
+			{
+				title: "Tiêu Chuẩn Chất Lượng Cao",
+				description: "Phần mềm đạt tiêu chuẩn quốc tế với độ chính xác và sự chú ý đến chi tiết."
+			},
+			{
+				title: "Giao Hàng Đúng Hạn",
+				description: "Phương pháp agile đảm bảo deadline được đáp ứng mà không ảnh hưởng chất lượng."
+			},
+			{
+				title: "Đội Ngũ Chuyên Gia",
+				description: "100+ kỹ sư và tư vấn viên giàu kinh nghiệm với công nghệ hiện đại."
+			},
+			{
+				title: "Phạm Vi Toàn Cầu",
+				description: "Phục vụ khách hàng tại Nhật, Mỹ, Hàn Quốc, Singapore, Úc và Việt Nam."
+			}
+		],
+		cta: "Hợp Tác Với Chúng Tôi"
+	},
+
+	// Services detail
+	servicesDetail: {
+		badge: "Dịch Vụ Của Chúng Tôi",
+		items: [
+			{
+				title: "Phát Triển Phần Mềm Tùy Chỉnh",
+				description: "Phát triển phần mềm từ ý tưởng đến triển khai. Xây dựng ứng dụng web, mobile và doanh nghiệp có khả năng mở rộng."
+			},
+			{
+				title: "Gia Công CNTT",
+				description: "Đội ngũ phát triển chuyên dụng cho dự án của bạn. Tiếp cận nhân tài Việt Nam với tiêu chuẩn chất lượng quốc tế."
+			},
+			{
+				title: "Tích Hợp Hệ Thống",
+				description: "Kết nối liền mạch các hệ thống và ứng dụng. Chuyên về phát triển API, di chuyển dữ liệu và tích hợp doanh nghiệp."
+			},
+			{
+				title: "Giải Pháp Đám Mây",
+				description: "Kiến trúc đám mây, di chuyển và dịch vụ DevOps. Tối ưu hạ tầng với chuyên môn AWS, Azure và Google Cloud."
+			},
+			{
+				title: "Bảo Trì & Hỗ Trợ",
+				description: "Hỗ trợ kỹ thuật và bảo trì hệ thống 24/7. Giữ ứng dụng hoạt động trơn tru với đội ngũ hỗ trợ chuyên dụng."
+			},
+			{
+				title: "Tư Vấn CNTT",
+				description: "Tư vấn công nghệ chiến lược cho chuyển đổi số. Tận dụng chuyên môn để tối ưu quy trình kinh doanh."
+			}
+		],
+		learnMore: "Tìm Hiểu Thêm"
 	},
 
 	// Footer
 	footer: {
 		aboutTitle: "Về BlueStar",
 		aboutText: "Chúng tôi đam mê cung cấp một số dịch vụ phát triển kinh doanh tốt nhất cho các startup",
-		linksTitle: "Liên Kết Quan Trọng",
+		linksTitle: "Liên Kết Nhanh",
+		servicesTitle: "Dịch Vụ",
+		contactTitle: "Liên Hệ",
 		socialTitle: "Mạng Xã Hội",
+		ctaTitle: "Sẵn sàng bắt đầu dự án?",
+		ctaSubtitle: "Hãy cùng xây dựng điều phi thường",
+		ctaButton: "Nhận Báo Giá Miễn Phí",
 		copyright: "Bản quyền © 2020",
 		allRightsReserved: "- Bảo lưu mọi quyền",
+		privacyPolicy: "Chính Sách Bảo Mật",
+		termsOfService: "Điều Khoản Dịch Vụ",
+		services: [
+			"Phát Triển Phần Mềm Tùy Chỉnh",
+			"Gia Công CNTT",
+			"Tích Hợp Hệ Thống",
+			"Giải Pháp Đám Mây"
+		]
 	},
 };
 
