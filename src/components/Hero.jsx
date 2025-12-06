@@ -25,12 +25,12 @@ const Hero = () => {
 
 			{/* Content */}
 			<div className="relative z-10 h-full flex items-center justify-center w-full">
-				<div className="section-container pt-24 md:pt-28 lg:pt-20 pb-20">
+				<div className="section-container pt-24 md:pt-24 lg:pt-28 pb-16">
 					<div className="grid lg:grid-cols-2 gap-12 items-center">
 						{/* Left Content */}
 						<div className="text-white max-w-2xl">
 							{/* Heading */}
-							<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1] mb-4 md:mb-6">
+							<h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-[1.1] mb-4 md:mb-6">
 								{t.hero.heading1}
 								<span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-yellow-400">
 									{t.hero.heading2}
