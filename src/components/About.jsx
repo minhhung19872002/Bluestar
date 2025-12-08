@@ -41,11 +41,13 @@ const About = () => {
 								src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
 								alt="Software development team"
 								className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+								loading="lazy"
+								width="1000"
+								height="750"
 							/>
 							{/* Overlay */}
 							<div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
-						</div>
-
+						</div>{" "}
 						{/* Floating Stats Cards - Show on sm+ */}
 						<div className="hidden sm:block absolute -bottom-4 sm:-bottom-6 -right-2 sm:right-0 lg:-right-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-accent-orange/20 hover:-translate-y-1 transition-all duration-300">
 							<div className="flex items-center gap-3 sm:gap-4">
@@ -64,7 +66,6 @@ const About = () => {
 								</div>
 							</div>
 						</div>
-
 						<div className="hidden sm:block absolute -top-4 sm:-top-6 -left-2 sm:left-0 lg:-left-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300">
 							<div className="flex items-center gap-3 sm:gap-4">
 								<div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
@@ -83,7 +84,6 @@ const About = () => {
 								</div>
 							</div>
 						</div>
-
 						{/* Decorative Elements */}
 						<div className="absolute -bottom-4 -left-4 w-24 sm:w-32 h-24 sm:h-32 bg-accent-orange/10 rounded-2xl sm:rounded-3xl -z-10" />
 						<div className="absolute -top-4 -right-4 w-16 sm:w-24 h-16 sm:h-24 bg-navy-100 rounded-xl sm:rounded-2xl -z-10" />

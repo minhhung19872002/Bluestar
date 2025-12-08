@@ -1,7 +1,7 @@
 const en = {
 	// Meta
 	pageTitle: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD | Software Outsourcing & IT Solutions",
-	metaDescription: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD - Expert in software outsourcing, application development, IT consulting with over 10 years of experience. Trusted partner in Ho Chi Minh City, Vietnam.",
+	metaDescription: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD - Expert in software outsourcing, application development, IT consulting with of experience. Trusted partner in Ho Chi Minh City, Vietnam.",
 	metaKeywords: "BLUESTAR, bluestar technology engineering, software outsourcing, IT outsourcing, software development, IT consulting, technology solutions, application development, programming, Ho Chi Minh City, Vietnam",
 
 	// Navigation

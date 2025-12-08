@@ -1,8 +1,8 @@
 const vi = {
 	// Meta
 	pageTitle: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR | Gia Công Phần Mềm & Giải Pháp CNTT",
-	metaDescription: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - Chuyên gia công phần mềm, phát triển ứng dụng, tư vấn giải pháp CNTT với hơn 10 năm kinh nghiệm. Đối tác tin cậy tại TP Hồ Chí Minh, Việt Nam.",
-	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, gia công phần mềm, outsourcing, phát triển phần mềm, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam",
+	metaDescription: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - Chuyên gia công phần mềm, phát triển ứng dụng, tư vấn giải pháp CNTT với kinh nghiệm. Đối tác tin cậy tại TP Hồ Chí Minh, Việt Nam.",
+	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, gia công phần mềm, outsourcing, phát triển phần mềm, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam, phát triển web, phát triển mobile app, ứng dụng di động, React, NodeJS, Java, Python, AWS, Azure, Google Cloud, DevOps, tích hợp hệ thống, API development, offshore development, công ty phần mềm Việt Nam, phần mềm tùy chỉnh, bảo trì phần mềm, hỗ trợ kỹ thuật 24/7, chuyển đổi số",
 
 	// Navigation
 	nav: {
