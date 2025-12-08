@@ -18,7 +18,7 @@ const en = {
 	// Header
 	header: {
 		title: "About Us",
-		description: "BLUESTAR is an IT outsourcing company with over 10 years of experience, providing software services and technology solutions to clients across North America, Japan, Korea, Singapore, Australia and Vietnam.",
+		description: "BLUESTAR is a software outsourcing company with over 10 years of experience, providing IT solutions to clients in the US, Japan, Korea, Singapore, Australia and Vietnam.",
 		button: "DISCOVER",
 	},
 
@@ -32,7 +32,8 @@ const en = {
 		stats: {
 			years: "Years",
 			experts: "Experts",
-			projects: "Projects"
+			projects: "Projects",
+			onTime: "On-Time"
 		},
 		features: {
 			safety: {
@@ -260,26 +261,26 @@ const en = {
 		reasons: [
 			{
 				title: "International Quality Standards",
-				description: "We deliver software that meets global standards with meticulous attention to detail and best practices."
+				description: "We develop software that meets global standards with meticulous attention to every detail and process."
 			},
 			{
-				title: "Reliable On-Time Delivery",
-				description: "Our agile methodology ensures every milestone is met. We understand time-to-market is critical for success."
+				title: "On-Time Delivery",
+				description: "Agile methodology ensures every milestone is met without compromising product quality."
 			},
 			{
 				title: "Scalable Solutions",
-				description: "Build software that grows with your business. Our architectures are designed for long-term success."
+				description: "Architecture built for long-term growth, aligned with your business expansion goals."
 			},
 			{
 				title: "Clear Communication",
-				description: "Multilingual teams ensure nothing is lost in translation. Regular updates keep you informed at every stage."
+				description: "Multilingual team ensures seamless information flow. Transparent updates throughout every project phase."
 			}
 		],
 		stats: {
-			projects: "Projects Completed",
-			engineers: "Expert Engineers",
+			success: "Success",
+			onTime: "On-Time Delivery",
 			years: "Years Experience",
-			satisfaction: "Client Satisfaction"
+			quality: "Quality Commitment"
 		},
 		cta: "Start Your Project Today"
 	},
@@ -289,7 +290,7 @@ const en = {
 		badge: "About Us",
 		title: "Building Tomorrow with",
 		titleHighlight: "Digital Innovation",
-		description2: "Our commitment to excellence, combined with deep understanding of international markets, makes us the preferred partner for companies seeking reliable software development and IT consulting services.",
+		description2: "We are committed to delivering quality products with transparency and efficiency. With deep understanding of international market needs, BLUESTAR is a trusted partner for businesses requiring software development services, operational optimization, and IT consulting solutions.",
 		yearsOf: "Years of",
 		excellence: "Excellence",
 		clientSatisfaction: "Client Satisfaction",
@@ -304,7 +305,7 @@ const en = {
 			},
 			{
 				title: "Expert Team",
-				description: "100+ experienced engineers and consultants skilled in modern technologies."
+				description: "Experienced engineers and consultants with deep knowledge of technology and business domains."
 			},
 			{
 				title: "Global Reach",

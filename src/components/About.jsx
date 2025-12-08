@@ -47,7 +47,7 @@ const About = () => {
 						</div>
 
 						{/* Floating Stats Cards - Show on sm+ */}
-						<div className="hidden sm:block absolute -bottom-4 sm:-bottom-6 -right-2 sm:-right-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-accent-orange/20 hover:-translate-y-1 transition-all duration-300">
+						<div className="hidden sm:block absolute -bottom-4 sm:-bottom-6 -right-2 sm:right-0 lg:-right-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-accent-orange/20 hover:-translate-y-1 transition-all duration-300">
 							<div className="flex items-center gap-3 sm:gap-4">
 								<div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-accent-orange to-orange-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg shadow-orange-500/30">
 									<span className="text-sm sm:text-xl font-bold text-white">
@@ -65,7 +65,7 @@ const About = () => {
 							</div>
 						</div>
 
-						<div className="hidden sm:block absolute -top-4 sm:-top-6 -left-2 sm:-left-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300">
+						<div className="hidden sm:block absolute -top-4 sm:-top-6 -left-2 sm:left-0 lg:-left-6 bg-white rounded-xl sm:rounded-2xl shadow-2xl p-3 sm:p-5 border border-gray-100 hover:shadow-green-500/20 hover:-translate-y-1 transition-all duration-300">
 							<div className="flex items-center gap-3 sm:gap-4">
 								<div className="w-10 h-10 sm:w-14 sm:h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-lg sm:rounded-xl flex items-center justify-center shadow-lg shadow-green-500/30">
 									<Icon

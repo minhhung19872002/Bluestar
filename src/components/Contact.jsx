@@ -42,7 +42,7 @@ const Contact = () => {
 					Accept: "application/json",
 				},
 				body: JSON.stringify({
-					access_key: "b9e8de36-bc04-4fa9-9881-3e85a3fd6425",
+					access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
 					subject: `[Bluestar] Yêu cầu tư vấn từ ${formData.name}`,
 					from_name: "Bluestar Website",
 					name: formData.name,

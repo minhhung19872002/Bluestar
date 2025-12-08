@@ -84,24 +84,24 @@ const Hero = () => {
 								</div>
 								<div className="text-center">
 									<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">
-										100
-										<span className="text-accent-orange">
-											+
-										</span>
-									</div>
-									<div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">
-										{t.hero.stats.experts}
-									</div>
-								</div>
-								<div className="text-center">
-									<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">
-										500
+										20
 										<span className="text-accent-orange">
 											+
 										</span>
 									</div>
 									<div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">
 										{t.hero.stats.projects}
+									</div>
+								</div>
+								<div className="text-center">
+									<div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1">
+										100
+										<span className="text-accent-orange">
+											%
+										</span>
+									</div>
+									<div className="text-xs sm:text-sm text-white/50 uppercase tracking-wider">
+										{t.hero.stats.onTime}
 									</div>
 								</div>
 							</div>

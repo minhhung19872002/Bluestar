@@ -103,16 +103,16 @@ const WhyChooseUs = () => {
 				<div className="mt-12 sm:mt-16 lg:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
 					{[
 						{
-							value: "500+",
-							labelKey: "projects",
-							icon: "solar:box-linear",
-							color: "from-blue-400 to-indigo-500",
+							value: "100%",
+							labelKey: "success",
+							icon: "solar:shield-check-linear",
+							color: "from-green-400 to-emerald-500",
 						},
 						{
-							value: "50+",
-							labelKey: "engineers",
-							icon: "solar:users-group-rounded-linear",
-							color: "from-green-400 to-emerald-500",
+							value: "100%",
+							labelKey: "onTime",
+							icon: "solar:clock-circle-linear",
+							color: "from-blue-400 to-indigo-500",
 						},
 						{
 							value: "10+",
@@ -121,9 +121,9 @@ const WhyChooseUs = () => {
 							color: "from-yellow-400 to-orange-500",
 						},
 						{
-							value: "99%",
-							labelKey: "satisfaction",
-							icon: "solar:star-shine-linear",
+							value: "100%",
+							labelKey: "quality",
+							icon: "solar:verified-check-linear",
 							color: "from-accent-orange to-pink-500",
 						},
 					].map((stat, index) => (
@@ -132,8 +132,7 @@ const WhyChooseUs = () => {
 							className="group text-center p-4 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 border border-navy-700 hover:border-accent-orange/30 shadow-xl hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden"
 						>
 							{/* Glow Effect */}
-							<div className="absolute inset-0 bg-gradient-to-t from-accent-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
+							<div className="absolute inset-0 bg-gradient-to-t from-accent-orange/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />{" "}
 							<div className="relative">
 								<div
 									className={`w-10 h-10 sm:w-12 sm:h-12 mx-auto mb-2 sm:mb-3 rounded-lg sm:rounded-xl bg-gradient-to-br ${stat.color} flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform`}

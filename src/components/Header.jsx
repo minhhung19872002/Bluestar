@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Icon } from "@iconify/react";
 import { useLanguage } from "../LanguageContext";
 
@@ -6,14 +6,59 @@ const Header = () => {
 	const { t, language, toggleLanguage } = useLanguage();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+	const [activeSection, setActiveSection] = useState("#home");
+	const mobileMenuRef = useRef(null);
 
 	useEffect(() => {
 		const handleScroll = () => {
 			setIsScrolled(window.scrollY > 50);
+
+			// Detect active section
+			const sections = ["#home", "#services", "#about", "#contact"];
+			const scrollPosition = window.scrollY + 100; // Offset for header height
+
+			for (const sectionId of sections) {
+				const element = document.querySelector(sectionId);
+				if (element) {
+					const offsetTop = element.offsetTop;
+					const offsetBottom = offsetTop + element.offsetHeight;
+
+					if (
+						scrollPosition >= offsetTop &&
+						scrollPosition < offsetBottom
+					) {
+						setActiveSection(sectionId);
+						break;
+					}
+				}
+			}
 		};
+
+		handleScroll(); // Run once on mount
 		window.addEventListener("scroll", handleScroll);
 		return () => window.removeEventListener("scroll", handleScroll);
 	}, []);
+
+	// Close mobile menu when clicking outside
+	useEffect(() => {
+		const handleClickOutside = (event) => {
+			if (
+				isMobileMenuOpen &&
+				mobileMenuRef.current &&
+				!mobileMenuRef.current.contains(event.target)
+			) {
+				setIsMobileMenuOpen(false);
+			}
+		};
+
+		document.addEventListener("mousedown", handleClickOutside);
+		document.addEventListener("touchstart", handleClickOutside);
+
+		return () => {
+			document.removeEventListener("mousedown", handleClickOutside);
+			document.removeEventListener("touchstart", handleClickOutside);
+		};
+	}, [isMobileMenuOpen]);
 
 	const navItems = [
 		{ label: t.nav.home, href: "#home" },
@@ -24,6 +69,7 @@ const Header = () => {
 
 	return (
 		<header
+			ref={mobileMenuRef}
 			className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
 				isScrolled
 					? "bg-white/95 backdrop-blur-xl shadow-lg shadow-navy-900/5"
@@ -74,14 +120,22 @@ const Header = () => {
 								key={item.href}
 								href={item.href}
 								className={`relative px-5 py-2.5 text-sm font-medium transition-all duration-300 rounded-xl group ${
-									isScrolled
+									activeSection === item.href
+										? isScrolled
+											? "text-navy-900 bg-gray-100"
+											: "text-white bg-white/10"
+										: isScrolled
 										? "text-gray-600 hover:text-navy-900 hover:bg-gray-100"
 										: "text-white/80 hover:text-white hover:bg-white/10"
 								}`}
 							>
 								{item.label}
 								<span
-									className={`absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-accent-orange rounded-full transition-all duration-300 group-hover:w-6`}
+									className={`absolute bottom-1 left-1/2 -translate-x-1/2 h-0.5 bg-accent-orange rounded-full transition-all duration-300 ${
+										activeSection === item.href
+											? "w-6"
+											: "w-0 group-hover:w-6"
+									}`}
 								/>
 							</a>
 						))}
@@ -153,14 +207,14 @@ const Header = () => {
 				{/* Mobile Menu */}
 				<div
 					className={`lg:hidden overflow-hidden transition-all duration-500 ${
-						isMobileMenuOpen ? "max-h-[500px] pb-6" : "max-h-0"
+						isMobileMenuOpen ? "max-h-[500px] pb-4" : "max-h-0"
 					}`}
 				>
 					<nav
-						className={`flex flex-col gap-2 pt-4 mt-2 rounded-2xl ${
+						className={`flex flex-col gap-2 mt-4 rounded-2xl overflow-hidden ${
 							isScrolled
-								? "border-t border-gray-200"
-								: "bg-white/95 backdrop-blur-xl shadow-xl p-4"
+								? "bg-gray-50 p-3"
+								: "bg-white/95 backdrop-blur-xl shadow-2xl p-4"
 						}`}
 					>
 						{navItems.map((item) => (
@@ -168,19 +222,35 @@ const Header = () => {
 								key={item.href}
 								href={item.href}
 								onClick={() => setIsMobileMenuOpen(false)}
-								className="px-4 py-3 text-gray-700 font-medium rounded-xl hover:bg-gray-100 hover:text-navy-900 transition-colors flex items-center gap-3"
+								className={`px-4 py-3.5 font-medium rounded-xl transition-all duration-300 flex items-center gap-3 ${
+									activeSection === item.href
+										? "bg-accent-orange text-white shadow-lg shadow-accent-orange/30"
+										: "text-gray-700 hover:bg-white hover:text-navy-900"
+								}`}
 							>
-								<div className="w-2 h-2 bg-accent-orange rounded-full" />
+								<div
+									className={`w-2 h-2 rounded-full ${
+										activeSection === item.href
+											? "bg-white"
+											: "bg-accent-orange"
+									}`}
+								/>
 								{item.label}
 							</a>
 						))}
-						<a
-							href="#contact"
-							onClick={() => setIsMobileMenuOpen(false)}
-							className="mt-2 bg-gradient-to-r from-accent-orange to-orange-500 text-white px-6 py-3 rounded-xl font-semibold text-center shadow-lg"
-						>
-							{t.nav.contact}
-						</a>
+						<div className="pt-2 mt-1 border-t border-gray-200">
+							<a
+								href="#contact"
+								onClick={() => setIsMobileMenuOpen(false)}
+								className="flex items-center justify-center gap-2 bg-gradient-to-r from-accent-orange to-orange-500 text-white px-6 py-3.5 rounded-xl font-semibold text-center shadow-lg shadow-accent-orange/30 hover:shadow-accent-orange/50 transition-all duration-300"
+							>
+								<span>{t.nav.contact}</span>
+								<Icon
+									icon="solar:arrow-right-linear"
+									className="w-4 h-4"
+								/>
+							</a>
+						</div>
 					</nav>
 				</div>
 			</div>

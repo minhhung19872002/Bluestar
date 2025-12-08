@@ -18,7 +18,7 @@ const vi = {
 	// Header
 	header: {
 		title: "Về Chúng Tôi",
-		description: "BLUESTAR là công ty gia công phần mềm với hơn 10 năm kinh nghiệm, cung cấp dịch vụ phần mềm và giải pháp công nghệ cho khách hàng tại Bắc Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
+		description: "BLUESTAR là công ty gia công phần mềm hơn 10 năm kinh nghiệm, cung cấp giải pháp CNTT cho khách hàng tại Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
 		button: "KHÁM PHÁ",
 	},
 
@@ -32,7 +32,8 @@ const vi = {
 		stats: {
 			years: "Năm",
 			experts: "Chuyên Gia",
-			projects: "Dự Án"
+			projects: "Dự Án",
+			onTime: "Đúng Tiến Độ"
 		},
 		features: {
 			safety: {
@@ -260,26 +261,26 @@ const vi = {
 		reasons: [
 			{
 				title: "Tiêu Chuẩn Chất Lượng Quốc Tế",
-				description: "Chúng tôi cung cấp phần mềm đạt tiêu chuẩn toàn cầu với sự chú ý tỉ mỉ đến chi tiết và quy trình tốt nhất."
+				description: "Chúng tôi phát triển phần mềm đạt tiêu chuẩn toàn cầu với sự chú ý tỉ mỉ đến từng chi tiết và quy trình."
 			},
 			{
 				title: "Giao Hàng Đúng Hạn",
-				description: "Phương pháp agile đảm bảo mọi cột mốc được đáp ứng. Chúng tôi hiểu thời gian ra thị trường rất quan trọng."
+				description: "Phương pháp agile đảm bảo mọi cột mốc được đáp ứng mà không ảnh hưởng đến chất lượng sản phẩm."
 			},
 			{
 				title: "Giải Pháp Mở Rộng",
-				description: "Xây dựng phần mềm phát triển cùng doanh nghiệp của bạn. Kiến trúc được thiết kế cho thành công lâu dài."
+				description: "Kiến trúc được xây dựng để phát triển dài hạn, phù hợp với mục tiêu tăng trưởng của doanh nghiệp bạn."
 			},
 			{
 				title: "Giao Tiếp Rõ Ràng",
-				description: "Đội ngũ đa ngôn ngữ đảm bảo không có gì bị mất trong dịch thuật. Cập nhật thường xuyên giữ bạn nắm bắt mọi giai đoạn."
+				description: "Đội ngũ đa ngôn ngữ đảm bảo thông tin không bị gian đoạn. Cập nhật minh bạch trong suốt mọi giai đoạn dự án."
 			}
 		],
 		stats: {
-			projects: "Dự Án Hoàn Thành",
-			engineers: "Kỹ Sư Chuyên Gia",
+			success: "Thành Công",
+			onTime: "Đúng Tiến Độ",
 			years: "Năm Kinh Nghiệm",
-			satisfaction: "Khách Hàng Hài Lòng"
+			quality: "Chất Lượng Cam Kết"
 		},
 		cta: "Bắt Đầu Dự Án Ngay"
 	},
@@ -289,7 +290,7 @@ const vi = {
 		badge: "Về Chúng Tôi",
 		title: "Xây Dựng Tương Lai với",
 		titleHighlight: "Đổi Mới Số",
-		description2: "Cam kết xuất sắc cùng hiểu biết sâu sắc về thị trường quốc tế khiến chúng tôi trở thành đối tác ưu tiên cho các công ty tìm kiếm dịch vụ phát triển phần mềm và tư vấn CNTT đáng tin cậy.",
+		description2: "Chúng tôi cam kết mang đến sản phẩm chất lượng, minh bạch và hiệu quả. Với hiểu biết sâu sắc về nhu cầu thị trường quốc tế, BLUESTAR là đối tác đáng tin cậy cho doanh nghiệp cần dịch vụ phát triển phần mềm, tối ưu vận hành và tư vấn giải pháp CNTT.",
 		yearsOf: "Năm",
 		excellence: "Xuất Sắc",
 		clientSatisfaction: "Khách Hàng Hài Lòng",
@@ -304,7 +305,7 @@ const vi = {
 			},
 			{
 				title: "Đội Ngũ Chuyên Gia",
-				description: "100+ kỹ sư và tư vấn viên giàu kinh nghiệm với công nghệ hiện đại."
+				description: "Đội ngũ kỹ sư và tư vấn viên giàu kinh nghiệm, am hiểu công nghệ và nghiệp vụ."
 			},
 			{
 				title: "Phạm Vi Toàn Cầu",
