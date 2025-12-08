@@ -36,15 +36,15 @@ const About = () => {
 					{/* Left - Image/Visual */}
 					<div className="relative">
 						{/* Main Image Container */}
-					<div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
-						<img
-							src="/images/meeting.avif"
-							alt="Software development team"
-							className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
-							loading="lazy"
-							width="1000"
-							height="750"
-						/>
+						<div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
+							<img
+								src="/images/meeting.avif"
+								alt="Software development team"
+								className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
+								loading="lazy"
+								width="1000"
+								height="750"
+							/>
 							{/* Overlay */}
 							<div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
 						</div>{" "}
