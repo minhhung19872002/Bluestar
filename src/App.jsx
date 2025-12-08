@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useLanguage } from "./LanguageContext";
 import {
 	Header,
 	Hero,
@@ -8,21 +7,10 @@ import {
 	WhyChooseUs,
 	Contact,
 	Footer,
+	SEO,
 } from "./components";
 
 function App() {
-	const { t } = useLanguage();
-
-	useEffect(() => {
-		document.title = t.pageTitle;
-		document
-			.querySelector('meta[name="description"]')
-			?.setAttribute("content", t.metaDescription);
-		document
-			.querySelector('meta[name="keywords"]')
-			?.setAttribute("content", t.metaKeywords);
-	}, [t]);
-
 	// Smooth scroll for anchor links
 	useEffect(() => {
 		const handleAnchorClick = (e) => {
@@ -51,6 +39,7 @@ function App() {
 
 	return (
 		<div className="min-h-screen">
+			<SEO />
 			<Header />
 			<main>
 				<Hero />

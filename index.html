@@ -2,13 +2,22 @@
 <html lang="vi">
 	<head>
 		<meta charset="UTF-8" />
+
+		<!-- Preconnect to external domains for better performance -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link rel="dns-prefetch" href="https://api.web3forms.com" />
+
 		<link
 			rel="icon"
 			type="image/svg+xml"
 			href="public/images/logostar.png"
 		/>
+		<link rel="apple-touch-icon" href="public/images/logostar.png" />
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="theme-color" content="#1e3a5f" />
 
 		<!-- Primary Meta Tags -->
 		<title>
@@ -173,6 +182,105 @@
 					"target": "https://bluestar.com.vn/search?q={search_term_string}",
 					"query-input": "required name=search_term_string"
 				}
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+				"name": "BLUESTAR - Software Development & IT Consulting",
+				"description": "Gia công phần mềm, phát triển ứng dụng, tư vấn CNTT với 10+ năm kinh nghiệm",
+				"url": "https://bluestar.com.vn",
+				"serviceType": [
+					"Phát Triển Phần Mềm Tùy Chỉnh",
+					"Gia Công CNTT",
+					"Tích Hợp Hệ Thống",
+					"Giải Pháp Đám Mây",
+					"Bảo Trì & Hỗ Trợ",
+					"Tư Vấn CNTT"
+				],
+				"areaServed": {
+					"@type": "Country",
+					"name": [
+						"Vietnam",
+						"United States",
+						"Japan",
+						"Korea",
+						"Singapore",
+						"Australia"
+					]
+				},
+				"hasOfferCatalog": {
+					"@type": "OfferCatalog",
+					"name": "Software Development Services",
+					"itemListElement": [
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "Custom Software Development",
+								"description": "Phát triển phần mềm từ ý tưởng đến triển khai"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "IT Outsourcing",
+								"description": "Đội ngũ phát triển chuyên dụng cho dự án của bạn"
+							}
+						},
+						{
+							"@type": "Offer",
+							"itemOffered": {
+								"@type": "Service",
+								"name": "System Integration",
+								"description": "Kết nối liền mạch các hệ thống và ứng dụng"
+							}
+						}
+					]
+				},
+				"aggregateRating": {
+					"@type": "AggregateRating",
+					"ratingValue": "5.0",
+					"reviewCount": "20",
+					"bestRating": "5",
+					"worstRating": "1"
+				}
+			}
+		</script>
+
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				"itemListElement": [
+					{
+						"@type": "ListItem",
+						"position": 1,
+						"name": "Trang Chủ",
+						"item": "https://bluestar.com.vn/"
+					},
+					{
+						"@type": "ListItem",
+						"position": 2,
+						"name": "Dịch Vụ",
+						"item": "https://bluestar.com.vn/#services"
+					},
+					{
+						"@type": "ListItem",
+						"position": 3,
+						"name": "Giới Thiệu",
+						"item": "https://bluestar.com.vn/#about"
+					},
+					{
+						"@type": "ListItem",
+						"position": 4,
+						"name": "Liên Hệ",
+						"item": "https://bluestar.com.vn/#contact"
+					}
+				]
 			}
 		</script>
 	</head>

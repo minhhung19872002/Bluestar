@@ -1,0 +1,57 @@
+{
+	"name": "bluestar-website-seo",
+	"version": "1.0.0",
+	"seo": {
+		"status": "optimized",
+		"lastUpdated": "2025-12-08",
+		"implementedFeatures": [
+			"Dynamic meta tags (title, description, keywords)",
+			"Open Graph tags (Facebook)",
+			"Twitter Card tags",
+			"Schema.org structured data (Organization, LocalBusiness, ProfessionalService, WebSite, BreadcrumbList)",
+			"Sitemap.xml",
+			"Optimized robots.txt",
+			"Canonical URLs",
+			"Language/locale tags",
+			"Mobile-responsive design",
+			"Performance optimization (preconnect, dns-prefetch)",
+			"Semantic HTML5",
+			"Geo-location tags",
+			"Theme color for mobile browsers"
+		],
+		"primaryKeywords": {
+			"vi": [
+				"gia công phần mềm",
+				"phát triển ứng dụng",
+				"tư vấn CNTT",
+				"outsourcing phần mềm",
+				"công ty phần mềm TP HCM",
+				"phát triển phần mềm tùy chỉnh"
+			],
+			"en": [
+				"software outsourcing vietnam",
+				"IT consulting Ho Chi Minh",
+				"custom software development",
+				"software development company vietnam",
+				"IT outsourcing services"
+			]
+		},
+		"targetMarkets": [
+			"Vietnam",
+			"United States",
+			"Japan",
+			"Korea",
+			"Singapore",
+			"Australia"
+		],
+		"nextSteps": [
+			"Submit sitemap to Google Search Console",
+			"Install Google Analytics",
+			"Create OG image (1200x630px)",
+			"Add image alt texts",
+			"Get verified on Google My Business",
+			"Build backlinks from Vietnamese tech directories",
+			"Create blog section for content marketing"
+		]
+	}
+}

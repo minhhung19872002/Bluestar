@@ -1,4 +1,13 @@
+# Bluestar Technology Engineering Co., Ltd - Robots.txt
 User-agent: *
-Disallow: /private
-Disallow: /hidden
 Allow: /
+Disallow: /admin
+Disallow: /private
+Disallow: /*.json$
+Disallow: /*?access_key=*
+
+# Sitemap location
+Sitemap: https://bluestar.com.vn/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

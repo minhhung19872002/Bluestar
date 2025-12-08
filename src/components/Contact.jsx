@@ -192,15 +192,6 @@ const Contact = () => {
 									/>
 								</a>
 								<a
-									href="#"
-									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#E4405F] hover:text-white transition-all duration-300"
-								>
-									<Icon
-										icon="mdi:instagram"
-										className="w-4 h-4 sm:w-5 sm:h-5"
-									/>
-								</a>
-								<a
 									href="https://zalo.me/0927394039"
 									target="_blank"
 									rel="noopener noreferrer"
