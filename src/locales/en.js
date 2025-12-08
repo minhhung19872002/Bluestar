@@ -1,7 +1,7 @@
 const en = {
 	// Meta
-	pageTitle: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD | Software Outsourcing & IT Solutions",
-	metaDescription: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD - Expert in software outsourcing, application development, IT consulting with of experience. Trusted partner in Ho Chi Minh City, Vietnam.",
+	pageTitle: "BLUESTAR - Professional Software Outsourcing | Web & Mobile App Development | IT Solutions Vietnam",
+	metaDescription: "BLUESTAR - Leading software outsourcing company in Vietnam. Expert in custom web app, mobile app development. 100+ engineers, 10+ years experience, 100% on-time delivery. Trusted IT partner in HCMC.",
 	metaKeywords: "BLUESTAR, bluestar technology engineering, software outsourcing, IT outsourcing, software development, IT consulting, technology solutions, application development, programming, Ho Chi Minh City, Vietnam",
 
 	// Navigation
@@ -368,6 +368,24 @@ const en = {
 			"System Integration",
 			"Cloud Solutions"
 		]
+	},
+
+	// 404 Page
+	notFound: {
+		title: "404 - Page Not Found",
+		heading: "Oops! Page Does Not Exist",
+		description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.",
+		btnHome: "Go Home",
+		btnServices: "View Services",
+		btnContact: "Contact Us",
+		helpTitle: "Need help?",
+		helpMessage: "Still having issues? We're here to help!",
+		helpLinks: [
+			{ title: "Home", href: "/", icon: "solar:home-2-bold" },
+			{ title: "Services", href: "#services", icon: "solar:widget-5-bold" },
+			{ title: "About", href: "#about", icon: "solar:users-group-rounded-bold" },
+			{ title: "Contact", href: "#contact", icon: "solar:letter-bold" },
+		],
 	},
 };
 

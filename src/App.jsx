@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import {
 	Header,
 	Hero,
@@ -8,6 +9,7 @@ import {
 	Contact,
 	Footer,
 	SEO,
+	NotFound,
 } from "./components";
 
 function App() {
@@ -40,15 +42,25 @@ function App() {
 	return (
 		<div className="min-h-screen">
 			<SEO />
-			<Header />
-			<main>
-				<Hero />
-				<Services />
-				<About />
-				<WhyChooseUs />
-				<Contact />
-			</main>
-			<Footer />
+			<Routes>
+				<Route
+					path="/"
+					element={
+						<>
+							<Header />
+							<main>
+								<Hero />
+								<Services />
+								<About />
+								<WhyChooseUs />
+								<Contact />
+							</main>
+							<Footer />
+						</>
+					}
+				/>
+				<Route path="*" element={<NotFound />} />
+			</Routes>
 		</div>
 	);
 }
