@@ -9,11 +9,11 @@ const Hero = () => {
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<img
-					src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+					src="/images/background.avif"
 					alt="Technology background"
 					className="w-full h-full object-cover"
 					loading="eager"
-					fetchpriority="high"
+					rel="preload"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/40" />
 				<div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />

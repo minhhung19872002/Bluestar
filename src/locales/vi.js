@@ -1,8 +1,8 @@
 const vi = {
 	// Meta
-	pageTitle: "BLUESTAR - Gia Công Phần Mềm Chuyên Nghiệp | Phát Triển Ứng Dụng Web Mobile | Outsourcing CNTT Việt Nam",
-	metaDescription: "BLUESTAR - Công ty gia công phần mềm hàng đầu Việt Nam. Chuyên phát triển web app, mobile app, custom software outsourcing. Đội ngũ 100+ kỹ sư, 10+ năm kinh nghiệm, giao hàng 100% đúng hạn. Đối tác CNTT tin cậy tại TP.HCM.",
-	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, gia công phần mềm, outsourcing, phát triển phần mềm, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam, phát triển web, phát triển mobile app, ứng dụng di động, React, NodeJS, Java, Python, AWS, Azure, Google Cloud, DevOps, tích hợp hệ thống, API development, offshore development, công ty phần mềm Việt Nam, phần mềm tùy chỉnh, bảo trì phần mềm, hỗ trợ kỹ thuật 24/7, chuyển đổi số",
+	pageTitle: "BLUESTAR - Gia Công Phần Mềm | Dịch Vụ CNTT Việt Nam",
+	metaDescription: "Chúng tôi chuyên gia công phần mềm, phát triển web/mobile app tối ưu. 100+ kỹ sư, 10+ năm kinh nghiệm, giao hàng 100% đúng hạn. Đối tác tin cậy tại TP.HCM.",
+	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, gia công phần mềm, outsourcing, phát triển phần mềm, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam, phát triển web, phát triển mobile app, ứng dụng di động, React, NodeJS, Java, Python, AWS, Azure, Google Cloud, DevOps, tích hợp hệ thống, API development, offshore development, công ty phần mềm Việt Nam, phần mềm tùy chỉnh, bảo trì phần mềm, hỗ trợ kỹ thuật 24/7, chuyển đổi số, chúng tôi, dịch vụ, tối, liên hệ",
 
 	// Navigation
 	nav: {
