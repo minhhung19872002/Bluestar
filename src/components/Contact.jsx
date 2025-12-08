@@ -175,6 +175,7 @@ const Contact = () => {
 							<div className="flex gap-2 sm:gap-3">
 								<a
 									href="#"
+									aria-label="Visit our Facebook page"
 									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#1877F2] hover:text-white transition-all duration-300"
 								>
 									<Icon
@@ -184,6 +185,7 @@ const Contact = () => {
 								</a>
 								<a
 									href="#"
+									aria-label="Visit our LinkedIn page"
 									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#0A66C2] hover:text-white transition-all duration-300"
 								>
 									<Icon
@@ -315,10 +317,14 @@ const Contact = () => {
 									</div>
 
 									<div>
-										<label className="block text-xs sm:text-sm font-semibold text-navy-900 mb-1.5 sm:mb-2">
+										<label
+											htmlFor="service"
+											className="block text-xs sm:text-sm font-semibold text-navy-900 mb-1.5 sm:mb-2"
+										>
 											{t.contact.serviceInterested}
 										</label>
 										<select
+											id="service"
 											name="service"
 											value={formData.service}
 											onChange={handleChange}

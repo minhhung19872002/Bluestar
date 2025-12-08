@@ -38,13 +38,17 @@ const About = () => {
 						{/* Main Image Container */}
 						<div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl group">
 							<img
-								src="/images/meeting.avif"
+								src="/images/meeting-630.webp"
+								srcSet="
+									/images/meeting-630.webp 630w,
+									/images/meeting-1260.webp 1260w
+								"
+								sizes="(max-width: 768px) 100vw, 630px"
 								alt="Software development team"
 								className="w-full aspect-[4/3] object-cover transition-transform duration-700 group-hover:scale-105"
 								loading="lazy"
-								width="1000"
-								height="750"
 							/>
+
 							{/* Overlay */}
 							<div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 via-transparent to-transparent" />
 						</div>{" "}
@@ -126,7 +130,7 @@ const About = () => {
 										/>
 									</div>
 									<div>
-										<h4 className="font-bold text-white text-sm sm:text-base">
+										<h4 className="font-bold text-white text-sm sm:text-base mb-1">
 											{feature.title}
 										</h4>
 										<p className="text-white/60 text-xs sm:text-sm mt-0.5 sm:mt-1">

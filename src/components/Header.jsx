@@ -10,33 +10,52 @@ const Header = () => {
 	const mobileMenuRef = useRef(null);
 
 	useEffect(() => {
+		let ticking = false;
+
 		const handleScroll = () => {
-			setIsScrolled(window.scrollY > 50);
-
-			// Detect active section
-			const sections = ["#home", "#services", "#about", "#contact"];
-			const scrollPosition = window.scrollY + 100; // Offset for header height
-
-			for (const sectionId of sections) {
-				const element = document.querySelector(sectionId);
-				if (element) {
-					const offsetTop = element.offsetTop;
-					const offsetBottom = offsetTop + element.offsetHeight;
-
-					if (
-						scrollPosition >= offsetTop &&
-						scrollPosition < offsetBottom
-					) {
-						setActiveSection(sectionId);
-						break;
-					}
-				}
+			if (!ticking) {
+				window.requestAnimationFrame(() => {
+					setIsScrolled(window.scrollY > 50);
+					ticking = false;
+				});
+				ticking = true;
 			}
 		};
 
+		// Detect active section using Intersection Observer
+		const sections = ["#home", "#services", "#about", "#contact"];
+		const observerOptions = {
+			rootMargin: "-100px 0px -66%",
+			threshold: 0,
+		};
+
+		const observerCallback = (entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					setActiveSection(`#${entry.target.id}`);
+				}
+			});
+		};
+
+		const observer = new IntersectionObserver(
+			observerCallback,
+			observerOptions
+		);
+
+		sections.forEach((sectionId) => {
+			const element = document.querySelector(sectionId);
+			if (element) {
+				observer.observe(element);
+			}
+		});
+
 		handleScroll(); // Run once on mount
-		window.addEventListener("scroll", handleScroll);
-		return () => window.removeEventListener("scroll", handleScroll);
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+			observer.disconnect();
+		};
 	}, []);
 
 	// Close mobile menu when clicking outside
@@ -182,6 +201,11 @@ const Header = () => {
 						<button
 							onClick={() =>
 								setIsMobileMenuOpen(!isMobileMenuOpen)
+							}
+							aria-label={
+								isMobileMenuOpen
+									? "Close navigation menu"
+									: "Open navigation menu"
 							}
 							className={`lg:hidden p-3 rounded-xl transition-all duration-300 ${
 								isScrolled

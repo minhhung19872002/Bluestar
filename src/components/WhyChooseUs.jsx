@@ -82,11 +82,11 @@ const WhyChooseUs = () => {
 									</div>
 								</div>
 
-								{/* Content */}
-								<div className="flex-1">
-									<h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-navy-900 mb-2 sm:mb-3 group-hover:text-accent-orange transition-colors">
-										{reason.title}
-									</h3>
+									{/* Content */}
+									<div className="flex-1">
+										<h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-navy-900 mb-2 sm:mb-3 group-hover:text-accent-orange transition-colors">
+											{reason.title}
+										</h4>
 									<p className="text-sm sm:text-base text-gray-700 leading-relaxed">
 										{reason.description}
 									</p>

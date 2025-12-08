@@ -214,13 +214,13 @@ const Footer = () => {
 					</p>
 					<div className="flex gap-4 sm:gap-8">
 						<a
-							href="#"
+							href="#privacy-policy"
 							className="text-white/50 hover:text-accent-orange transition-colors text-xs sm:text-sm"
 						>
 							{t.footer.privacyPolicy}
 						</a>
 						<a
-							href="#"
+							href="#terms-of-service"
 							className="text-white/50 hover:text-accent-orange transition-colors text-xs sm:text-sm"
 						>
 							{t.footer.termsOfService}

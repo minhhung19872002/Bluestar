@@ -4,8 +4,6 @@
 		<meta charset="UTF-8" />
 
 		<!-- Preconnect to external domains for better performance -->
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link rel="dns-prefetch" href="https://api.web3forms.com" />
 
 		<!-- Standard Favicon -->
@@ -369,6 +367,15 @@
 			}
 		</script>
 		<!-- Preload critical resources -->
+		<link
+			rel="preload"
+			as="image"
+			href="/images/background-1280.webp"
+			imagesrcset="/images/background-768.webp 768w,
+               /images/background-1280.webp 1280w,
+               /images/background-1600.webp 1600w"
+			imagesizes="100vw"
+		/>
 		<link rel="modulepreload" href="/src/main.jsx" />
 	</head>
 	<body>

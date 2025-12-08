@@ -9,11 +9,18 @@ const Hero = () => {
 			{/* Background Image with Overlay */}
 			<div className="absolute inset-0">
 				<img
-					src="/images/background.avif"
+					src="/images/background-1280.webp"
+					srcSet="
+						/images/background-768.webp 768w,
+						/images/background-1280.webp 1280w,
+						/images/background-1600.webp 1600w
+					"
+					sizes="100vw"
 					alt="Technology background"
 					className="w-full h-full object-cover"
 					loading="eager"
-					rel="preload"
+					// eslint-disable-next-line react/no-unknown-property
+					fetchpriority="high"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/40" />
 				<div className="absolute inset-0 bg-gradient-to-t from-navy-900/60 to-transparent" />
@@ -21,7 +28,6 @@ const Hero = () => {
 
 			{/* Animated Background Elements */}
 			<div className="absolute inset-0 overflow-hidden pointer-events-none">
-				<div className="absolute top-20 left-10 w-72 h-72 bg-accent-orange/20 rounded-full blur-3xl animate-pulse" />
 				<div className="absolute bottom-20 right-10 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
 			</div>
 
@@ -32,7 +38,7 @@ const Hero = () => {
 						{/* Left Content */}
 						<div className="text-white max-w-2xl">
 							{/* Heading */}
-							<h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-bold leading-[1.1] mb-4 md:mb-6">
+							<h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.2] mb-4 md:mb-6">
 								{t.hero.heading1}
 								<span className="block text-transparent bg-clip-text bg-gradient-to-r from-accent-orange to-yellow-400">
 									{t.hero.heading2}
