@@ -1,8 +1,20 @@
 import { useLanguage } from "../LanguageContext";
 import { Icon } from "@iconify/react";
+import { useEffect } from "react";
 
 const NotFound = () => {
 	const { t } = useLanguage();
+
+	// Update document title and meta for 404 page
+	useEffect(() => {
+		document.title = t.notFound.title;
+		const metaDescription = document.querySelector(
+			'meta[name="description"]'
+		);
+		if (metaDescription) {
+			metaDescription.setAttribute("content", t.notFound.description);
+		}
+	}, [t.notFound.title, t.notFound.description]);
 
 	const handleNavigate = (href) => {
 		if (href.startsWith("#")) {
