@@ -1,6 +1,7 @@
 # Bluestar Technology Engineering Co., Ltd - Robots.txt
 User-agent: *
 Allow: /
+Allow: /?lang=en
 Disallow: /admin
 Disallow: /private
 Disallow: /*.json$

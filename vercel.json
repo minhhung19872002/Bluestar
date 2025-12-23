@@ -1,4 +1,31 @@
 {
+	"redirects": [
+		{
+			"source": "/privacy-policy.html",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/blog/:path*",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/tenmien/:path*",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/body",
+			"destination": "/",
+			"statusCode": 301
+		},
+		{
+			"source": "/favicon/:path*",
+			"destination": "/",
+			"statusCode": 301
+		}
+	],
 	"rewrites": [
 		{
 			"source": "/(.*)",

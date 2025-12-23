@@ -5,6 +5,13 @@ const LanguageContext = createContext();
 
 export function LanguageProvider({ children }) {
 	const [language, setLanguage] = useState(() => {
+		// Check URL parameter first for SEO-friendly language switching
+		const urlParams = new URLSearchParams(window.location.search);
+		const urlLang = urlParams.get("lang");
+		if (urlLang && languages[urlLang]) {
+			localStorage.setItem("language", urlLang);
+			return urlLang;
+		}
 		// Get saved language from localStorage or default to Vietnamese
 		const saved = localStorage.getItem("language");
 		return saved && languages[saved] ? saved : "vi";

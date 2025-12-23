@@ -1,11 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
+  <!-- Homepage - Vietnamese (default) -->
   <url>
     <loc>https://bluestar.com.vn/</loc>
-    <lastmod>2024-02-09</lastmod>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://bluestar.com.vn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bluestar.com.vn/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bluestar.com.vn/" />
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+  <!-- Homepage - English -->
+  <url>
+    <loc>https://bluestar.com.vn/?lang=en</loc>
+    <xhtml:link rel="alternate" hreflang="vi" href="https://bluestar.com.vn/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://bluestar.com.vn/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bluestar.com.vn/" />
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
 </urlset>

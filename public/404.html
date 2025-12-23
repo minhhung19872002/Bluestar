@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>404 - Không Tìm Thấy Trang | BLUESTAR</title>
+    <meta name="description" content="Trang bạn đang tìm kiếm không tồn tại. Quay lại trang chủ BLUESTAR.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            text-align: center;
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 150px;
+            font-weight: 800;
+            color: rgba(30, 58, 95, 0.1);
+            line-height: 1;
+            margin-bottom: -30px;
+        }
+        .ghost {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            color: #1e3a5f;
+            margin-bottom: 16px;
+        }
+        p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+        .buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-primary {
+            background: #1e3a5f;
+            color: white;
+        }
+        .btn-primary:hover {
+            background: #2d4a6f;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 58, 95, 0.3);
+        }
+        .btn-secondary {
+            background: white;
+            color: #1e3a5f;
+            border: 2px solid #1e3a5f;
+        }
+        .btn-secondary:hover {
+            background: #1e3a5f;
+            color: white;
+        }
+        .help-box {
+            margin-top: 48px;
+            background: white;
+            padding: 32px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+        .help-box h2 {
+            font-size: 20px;
+            color: #1e3a5f;
+            margin-bottom: 20px;
+        }
+        .links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .links a {
+            color: #1e3a5f;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 6px;
+            transition: background 0.3s;
+        }
+        .links a:hover {
+            background: #e0f2fe;
+        }
+        @media (max-width: 480px) {
+            .error-code {
+                font-size: 100px;
+            }
+            h1 {
+                font-size: 24px;
+            }
+            .buttons {
+                flex-direction: column;
+            }
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <div class="ghost">👻</div>
+        <h1>Oops! Trang Không Tồn Tại</h1>
+        <p>Trang bạn đang tìm kiếm có thể đã bị xóa, đổi tên hoặc tạm thời không khả dụng.</p>
+
+        <div class="buttons">
+            <a href="/" class="btn btn-primary">
+                🏠 Về Trang Chủ
+            </a>
+            <a href="/#services" class="btn btn-secondary">
+                📦 Xem Dịch Vụ
+            </a>
+        </div>
+
+        <div class="help-box">
+            <h2>Bạn cần giúp đỡ?</h2>
+            <div class="links">
+                <a href="/">Trang Chủ</a>
+                <a href="/#services">Dịch Vụ</a>
+                <a href="/#about">Giới Thiệu</a>
+                <a href="/#contact">Liên Hệ</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to React app after 100ms to show 404 but load React
+        // This ensures Google sees the 404 status
+        setTimeout(function() {
+            // Only redirect if not a bot
+            var isBot = /bot|crawl|spider|google|bing|yahoo|baidu/i.test(navigator.userAgent);
+            if (!isBot) {
+                window.location.href = '/' + window.location.pathname;
+            }
+        }, 100);
+    </script>
+</body>
+</html>

@@ -23,6 +23,20 @@ const SEO = () => {
 
 		// Update HTML lang attribute
 		document.documentElement.lang = language;
+
+		// Update canonical URL based on language
+		const baseUrl = "https://bluestar.com.vn";
+		const canonicalUrl = language === "vi" ? `${baseUrl}/` : `${baseUrl}/?lang=en`;
+		updateLinkTag("canonical", canonicalUrl);
+
+		// Update hreflang tags dynamically
+		updateLinkTag("alternate", `${baseUrl}/`, "vi");
+		updateLinkTag("alternate", `${baseUrl}/?lang=en`, "en");
+		updateLinkTag("alternate", `${baseUrl}/`, "x-default");
+
+		// Update og:url for social sharing
+		updateMetaProperty("og:url", canonicalUrl);
+		updateMetaProperty("twitter:url", canonicalUrl);
 	}, [t, language]);
 
 	const updateMetaTag = (name, content) => {
@@ -36,6 +50,17 @@ const SEO = () => {
 		let element = document.querySelector(`meta[property="${property}"]`);
 		if (element) {
 			element.setAttribute("content", content);
+		}
+	};
+
+	const updateLinkTag = (rel, href, hreflang = null) => {
+		let selector = `link[rel="${rel}"]`;
+		if (hreflang) {
+			selector = `link[rel="${rel}"][hreflang="${hreflang}"]`;
+		}
+		let element = document.querySelector(selector);
+		if (element) {
+			element.setAttribute("href", href);
 		}
 	};
 

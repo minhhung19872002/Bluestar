@@ -1,4 +1,9 @@
-# Netlify Redirects for SPA
-# This ensures all routes are handled by index.html
+# Netlify Redirects - 301 Permanent Redirects for old URLs
+/privacy-policy.html    /    301
+/blog/*                 /    301
+/tenmien/*              /    301
+/body                   /    301
+/favicon/*              /    301
 
+# SPA fallback - must be last
 /*    /index.html   200
