@@ -217,7 +217,7 @@ const en = {
 		badge: "Contact Us",
 		title: "Contact Information",
 		subtitle: "Don't hesitate to give us a call or send us a contact form message",
-		address: "666/10/1-3-5 Ba Thang Hai, Dien Hong Ward, Ho Chi Minh City, Vietnam",
+		address: "431 To Hien Thanh, Dien Hong Ward, Ho Chi Minh City, Vietnam",
 		officeAddress: "Office Address",
 		emailUs: "Email Us",
 		callUs: "Call Us",

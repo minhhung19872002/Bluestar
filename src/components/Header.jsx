@@ -3,11 +3,20 @@ import { Icon } from "@iconify/react";
 import { useLanguage } from "../LanguageContext";
 
 const Header = () => {
-	const { t, language, toggleLanguage } = useLanguage();
+	const { t, language, switchLanguage, languageNames } = useLanguage();
 	const [isScrolled, setIsScrolled] = useState(false);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [activeSection, setActiveSection] = useState("#home");
 	const mobileMenuRef = useRef(null);
+	const [isLangOpen, setIsLangOpen] = useState(false);
+
+	const langOptions = [
+		{ code: "vi", label: "VI", flag: "https://flagcdn.com/w20/vn.png" },
+		{ code: "en", label: "EN", flag: "https://flagcdn.com/w20/us.png" },
+		{ code: "ja", label: "JA", flag: "https://flagcdn.com/w20/jp.png" },
+	];
+	const currentLang =
+		langOptions.find((l) => l.code === language) || langOptions[0];
 
 	useEffect(() => {
 		let ticking = false;
@@ -163,27 +172,69 @@ const Header = () => {
 					{/* Right Side */}
 					<div className="flex items-center gap-3">
 						{/* Language Switcher */}
-						<button
-							onClick={toggleLanguage}
-							className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
-								isScrolled
-									? "bg-gray-100 text-gray-700 hover:bg-gray-200"
-									: "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20"
-							}`}
-						>
-							<img
-								src={
-									language === "vi"
-										? "https://flagcdn.com/w20/us.png"
-										: "https://flagcdn.com/w20/vn.png"
-								}
-								alt={
-									language === "vi" ? "English" : "Tiếng Việt"
-								}
-								className="w-5 h-3.5 object-cover rounded-sm"
-							/>
-							<span>{language === "vi" ? "EN" : "VI"}</span>
-						</button>
+						<div className="relative">
+							<button
+								onClick={() => setIsLangOpen((v) => !v)}
+								className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
+									isScrolled
+										? "bg-gray-100 text-gray-700 hover:bg-gray-200"
+										: "bg-white/10 backdrop-blur-sm text-white hover:bg-white/20"
+								}`}
+							>
+								<img
+									src={currentLang.flag}
+									alt={languageNames[currentLang.code]}
+									className="w-5 h-3.5 object-cover rounded-sm"
+								/>
+								<span>{currentLang.label}</span>
+								<Icon
+									icon="solar:alt-arrow-down-linear"
+									className={`w-4 h-4 transition-transform duration-300 ${
+										isLangOpen ? "rotate-180" : ""
+									}`}
+								/>
+							</button>
+
+							{isLangOpen && (
+								<>
+									<div
+										className="fixed inset-0 z-40"
+										onClick={() => setIsLangOpen(false)}
+									/>
+									<div className="absolute right-0 mt-2 w-44 z-50 bg-white rounded-xl shadow-xl shadow-navy-900/10 border border-gray-100 overflow-hidden py-1">
+										{langOptions.map((opt) => (
+											<button
+												key={opt.code}
+												onClick={() => {
+													switchLanguage(opt.code);
+													setIsLangOpen(false);
+												}}
+												className={`w-full flex items-center gap-3 px-4 py-2.5 text-sm text-left transition-colors ${
+													opt.code === language
+														? "bg-gray-50 text-navy-900 font-semibold"
+														: "text-gray-600 hover:bg-gray-50"
+												}`}
+											>
+												<img
+													src={opt.flag}
+													alt={languageNames[opt.code]}
+													className="w-5 h-3.5 object-cover rounded-sm"
+												/>
+												<span>
+													{languageNames[opt.code]}
+												</span>
+												{opt.code === language && (
+													<Icon
+														icon="solar:check-circle-bold"
+														className="w-4 h-4 ml-auto text-accent-orange"
+													/>
+												)}
+											</button>
+										))}
+									</div>
+								</>
+							)}
+						</div>
 
 						{/* CTA Button */}
 						<a

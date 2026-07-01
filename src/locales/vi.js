@@ -217,7 +217,7 @@ const vi = {
 		badge: "Liên Hệ",
 		title: "Thông Tin Liên Hệ",
 		subtitle: "Đừng ngần ngại gọi cho chúng tôi hoặc gửi tin nhắn qua biểu mẫu liên hệ",
-		address: "666/10/1-3-5 Ba Tháng Hai, Phường Diên Hồng, TP Hồ Chí Minh, Việt Nam",
+		address: "431 Tô Hiến Thành, Phường Diên Hồng, TP Hồ Chí Minh, Việt Nam",
 		officeAddress: "Địa Chỉ Văn Phòng",
 		emailUs: "Gửi Email",
 		callUs: "Gọi Điện",

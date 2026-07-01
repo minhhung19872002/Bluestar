@@ -210,7 +210,7 @@ const Contact = () => {
 						{/* Google Map */}
 						<div className="h-[180px] sm:h-[200px] bg-navy-100 rounded-xl sm:rounded-2xl overflow-hidden relative">
 							<iframe
-								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.4241674197956!2d106.68006807583857!3d10.778789559303886!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3a9a8c124d%3A0x8f7d3f8a8a8a8a8a!2s666%2F10%2F1-3-5%20Ba%20Th%C3%A1ng%20Hai%2C%20Ph%C6%B0%E1%BB%9Dng%2014%2C%20Qu%E1%BA%ADn%2010%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh!5e0!3m2!1svi!2svn!4v1701777600000!5m2!1svi!2svn"
+								src="https://maps.google.com/maps?q=431%20T%C3%B4%20Hi%E1%BA%BFn%20Th%C3%A0nh%2C%20Ph%C6%B0%E1%BB%9Dng%20Di%C3%AAn%20H%E1%BB%93ng%2C%20Th%C3%A0nh%20ph%E1%BB%91%20H%E1%BB%93%20Ch%C3%AD%20Minh&t=&z=16&ie=UTF8&iwloc=&output=embed"
 								width="100%"
 								height="100%"
 								style={{ border: 0 }}
