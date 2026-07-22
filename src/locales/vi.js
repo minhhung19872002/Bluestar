@@ -1,8 +1,8 @@
 const vi = {
 	// Meta
-	pageTitle: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR | Gia Công Phần Mềm",
-	metaDescription: "Chúng tôi chuyên gia công phần mềm, phát triển web/mobile app tối ưu. 100+ kỹ sư, 10+ năm kinh nghiệm, giao hàng 100% đúng hạn. Đối tác tin cậy tại TP.HCM.",
-	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, gia công phần mềm, outsourcing, phát triển phần mềm, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam, phát triển web, phát triển mobile app, ứng dụng di động, React, NodeJS, Java, Python, AWS, Azure, Google Cloud, DevOps, tích hợp hệ thống, API development, offshore development, công ty phần mềm Việt Nam, phần mềm tùy chỉnh, bảo trì phần mềm, hỗ trợ kỹ thuật 24/7, chuyển đổi số, chúng tôi, dịch vụ, tối, liên hệ",
+	pageTitle: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR | Phát Triển Phần Mềm",
+	metaDescription: "Chúng tôi chuyên phát triển phần mềm, phát triển web/mobile app tối ưu. 100+ kỹ sư, 10+ năm kinh nghiệm, giao hàng 100% đúng hạn. Đối tác tin cậy tại TP.HCM.",
+	metaKeywords: "BLUESTAR, công ty TNHH kỹ thuật công nghệ bluestar, phát triển phần mềm, outsourcing, tư vấn CNTT, giải pháp công nghệ, phát triển ứng dụng, lập trình, IT outsourcing, TP Hồ Chí Minh, Việt Nam, phát triển web, phát triển mobile app, ứng dụng di động, React, NodeJS, Java, Python, AWS, Azure, Google Cloud, DevOps, tích hợp hệ thống, API development, offshore development, công ty phần mềm Việt Nam, phần mềm tùy chỉnh, bảo trì phần mềm, hỗ trợ kỹ thuật 24/7, chuyển đổi số, chúng tôi, dịch vụ, tối, liên hệ",
 
 	// Navigation
 	nav: {
@@ -18,7 +18,7 @@ const vi = {
 	// Header
 	header: {
 		title: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR",
-		description: "BLUESTAR là công ty gia công phần mềm, cung cấp giải pháp CNTT cho khách hàng tại Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
+		description: "BLUESTAR là công ty phát triển phần mềm, cung cấp giải pháp CNTT cho khách hàng tại Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
 		button: "KHÁM PHÁ",
 	},
 
@@ -244,7 +244,7 @@ const vi = {
 		ofBlueStar: "của BlueStar",
 		services: {
 			customSoftware: "Phát Triển Phần Mềm Tùy Chỉnh",
-			itOutsourcing: "Gia Công CNTT",
+			itOutsourcing: "Dịch Vụ CNTT",
 			systemIntegration: "Tích Hợp Hệ Thống",
 			cloudSolutions: "Giải Pháp Đám Mây",
 			maintenance: "Bảo Trì & Hỗ Trợ",
@@ -324,7 +324,7 @@ const vi = {
 				description: "Phát triển phần mềm từ ý tưởng đến triển khai. Xây dựng ứng dụng web, mobile và doanh nghiệp có khả năng mở rộng."
 			},
 			{
-				title: "Gia Công CNTT",
+				title: "Dịch Vụ CNTT",
 				description: "Đội ngũ phát triển chuyên dụng cho dự án của bạn. Tiếp cận nhân tài Việt Nam với tiêu chuẩn chất lượng quốc tế."
 			},
 			{
@@ -350,7 +350,7 @@ const vi = {
 	// Footer
 	footer: {
 		aboutTitle: "Về BlueStar",
-		aboutText: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - chuyên gia công phần mềm, phát triển ứng dụng và tư vấn giải pháp CNTT.",
+		aboutText: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - chuyên phát triển phần mềm, phát triển ứng dụng và tư vấn giải pháp CNTT.",
 		linksTitle: "Liên Kết Nhanh",
 		servicesTitle: "Dịch Vụ",
 		contactTitle: "Liên Hệ",
@@ -364,7 +364,7 @@ const vi = {
 		termsOfService: "Điều Khoản Dịch Vụ",
 		services: [
 			"Phát Triển Phần Mềm Tùy Chỉnh",
-			"Gia Công CNTT",
+			"Dịch Vụ CNTT",
 			"Tích Hợp Hệ Thống",
 			"Giải Pháp Đám Mây"
 		]
