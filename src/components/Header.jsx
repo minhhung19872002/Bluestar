@@ -117,7 +117,7 @@ const Header = () => {
 						>
 							<img
 								src="/images/logostar-nobg.png"
-								alt="Bluestar Logo"
+								alt="Logo CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR"
 								className="w-10 h-10 object-contain"
 							/>
 						</div>

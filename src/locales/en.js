@@ -1,6 +1,6 @@
 const en = {
 	// Meta
-	pageTitle: "BLUESTAR - Software Outsourcing | IT Services Vietnam",
+	pageTitle: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD | Software Outsourcing",
 	metaDescription: "We provide software outsourcing, web/mobile app development services. 100+ engineers, 10+ years experience, 100% on-time delivery. Trusted IT partner in HCMC.",
 	metaKeywords: "BLUESTAR, bluestar technology engineering, software outsourcing, IT outsourcing, software development, IT consulting, technology solutions, application development, programming, Ho Chi Minh City, Vietnam, we, services, contact",
 
@@ -17,7 +17,7 @@ const en = {
 
 	// Header
 	header: {
-		title: "About Us",
+		title: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD",
 		description: "BLUESTAR is a software outsourcing company with over 10 years of experience, providing IT solutions to clients in the US, Japan, Korea, Singapore, Australia and Vietnam.",
 		button: "DISCOVER",
 	},
@@ -350,7 +350,7 @@ const en = {
 	// Footer
 	footer: {
 		aboutTitle: "About BlueStar",
-		aboutText: "We're passionate about offering some of the best business growth services for startups",
+		aboutText: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD - software outsourcing, application development and IT consulting with over 10 years of experience.",
 		linksTitle: "Quick Links",
 		servicesTitle: "Services",
 		contactTitle: "Contact",

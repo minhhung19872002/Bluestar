@@ -52,7 +52,7 @@ const Footer = () => {
 							<div className="w-10 h-10 sm:w-12 sm:h-12 bg-white rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center p-1">
 								<img
 									src="/images/logostar-nobg.png"
-									alt="Bluestar Logo"
+									alt="Logo CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR"
 									className="w-full h-full object-contain"
 								/>
 							</div>
