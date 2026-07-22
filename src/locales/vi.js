@@ -18,7 +18,7 @@ const vi = {
 	// Header
 	header: {
 		title: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR",
-		description: "BLUESTAR là công ty gia công phần mềm hơn 10 năm kinh nghiệm, cung cấp giải pháp CNTT cho khách hàng tại Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
+		description: "BLUESTAR là công ty gia công phần mềm, cung cấp giải pháp CNTT cho khách hàng tại Mỹ, Nhật Bản, Hàn Quốc, Singapore, Úc và Việt Nam.",
 		button: "KHÁM PHÁ",
 	},
 
@@ -350,7 +350,7 @@ const vi = {
 	// Footer
 	footer: {
 		aboutTitle: "Về BlueStar",
-		aboutText: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - chuyên gia công phần mềm, phát triển ứng dụng và tư vấn giải pháp CNTT với hơn 10 năm kinh nghiệm.",
+		aboutText: "CÔNG TY TNHH KỸ THUẬT CÔNG NGHỆ BLUESTAR - chuyên gia công phần mềm, phát triển ứng dụng và tư vấn giải pháp CNTT.",
 		linksTitle: "Liên Kết Nhanh",
 		servicesTitle: "Dịch Vụ",
 		contactTitle: "Liên Hệ",
