@@ -349,7 +349,7 @@ const ja = {
 	// Footer
 	footer: {
 		aboutTitle: "BlueStarについて",
-		aboutText: "スタートアップ向けに最高峰のビジネス成長支援サービスを提供することに情熱を注いでいます",
+		aboutText: "BLUESTAR TECHNOLOGY ENGINEERING CO., LTD - 10年以上の経験を持つソフトウェア開発アウトソーシング、アプリ開発、ITコンサルティングの会社です",
 		linksTitle: "クイックリンク",
 		servicesTitle: "サービス",
 		contactTitle: "お問い合わせ",
