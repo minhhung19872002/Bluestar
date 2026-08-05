@@ -177,21 +177,21 @@ const Contact = () => {
 								<a
 									href="#"
 									aria-label="Visit our Facebook page"
-									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#1877F2] hover:text-white transition-all duration-300"
+									className="group w-10 h-10 sm:w-12 sm:h-12 bg-[#1877F2] rounded-lg sm:rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#1877F2]/30"
 								>
 									<Icon
 										icon="mdi:facebook"
-										className="w-4 h-4 sm:w-5 sm:h-5"
+										className="w-7 h-7 sm:w-8 sm:h-8"
 									/>
 								</a>
 								<a
 									href="#"
 									aria-label="Visit our LinkedIn page"
-									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#0A66C2] hover:text-white transition-all duration-300"
+									className="group w-10 h-10 sm:w-12 sm:h-12 bg-[#0A66C2] rounded-lg sm:rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#0A66C2]/30"
 								>
 									<Icon
 										icon="mdi:linkedin"
-										className="w-4 h-4 sm:w-5 sm:h-5"
+										className="w-7 h-7 sm:w-8 sm:h-8"
 									/>
 								</a>
 								<a

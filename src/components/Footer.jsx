@@ -73,20 +73,22 @@ const Footer = () => {
 						<div className="flex gap-2 sm:gap-3">
 							<a
 								href="#"
-								className="group w-9 h-9 sm:w-11 sm:h-11 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-[#1877F2] transition-all duration-300 hover:scale-110"
+								aria-label="Visit our Facebook page"
+								className="group w-9 h-9 sm:w-11 sm:h-11 bg-[#1877F2] rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
 							>
 								<Icon
 									icon="mdi:facebook"
-									className="w-4 h-4 sm:w-5 sm:h-5"
+									className="w-6 h-6 sm:w-7 sm:h-7"
 								/>
 							</a>
 							<a
 								href="#"
-								className="group w-9 h-9 sm:w-11 sm:h-11 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-[#0A66C2] transition-all duration-300 hover:scale-110"
+								aria-label="Visit our LinkedIn page"
+								className="group w-9 h-9 sm:w-11 sm:h-11 bg-[#0A66C2] rounded-lg sm:rounded-xl flex items-center justify-center transition-all duration-300 hover:scale-110"
 							>
 								<Icon
 									icon="mdi:linkedin"
-									className="w-4 h-4 sm:w-5 sm:h-5"
+									className="w-6 h-6 sm:w-7 sm:h-7"
 								/>
 							</a>
 							<a
