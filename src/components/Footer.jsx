@@ -1,5 +1,6 @@
 import { useLanguage } from "../LanguageContext";
 import { Icon } from "@iconify/react";
+import ZaloIcon from "./ZaloIcon";
 
 const Footer = () => {
 	const { t } = useLanguage();
@@ -92,12 +93,10 @@ const Footer = () => {
 								href="https://zalo.me/0927394039"
 								target="_blank"
 								rel="noopener noreferrer"
-								className="group w-9 h-9 sm:w-11 sm:h-11 bg-white/10 rounded-lg sm:rounded-xl flex items-center justify-center hover:bg-[#0068FF] transition-all duration-300 hover:scale-110"
+								aria-label="Chat with us on Zalo"
+								className="group w-9 h-9 sm:w-11 sm:h-11 rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center transition-all duration-300 hover:scale-110"
 							>
-								<Icon
-									icon="simple-icons:zalo"
-									className="w-4 h-4 sm:w-5 sm:h-5"
-								/>
+								<ZaloIcon />
 							</a>
 						</div>
 					</div>

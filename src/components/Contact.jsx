@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useLanguage } from "../LanguageContext";
 import { Icon } from "@iconify/react";
+import ZaloIcon from "./ZaloIcon";
 
 const Contact = () => {
 	const { t } = useLanguage();
@@ -197,12 +198,10 @@ const Contact = () => {
 									href="https://zalo.me/0927394039"
 									target="_blank"
 									rel="noopener noreferrer"
-									className="group w-10 h-10 sm:w-12 sm:h-12 bg-gray-100 rounded-lg sm:rounded-xl flex items-center justify-center text-gray-600 hover:bg-[#0068FF] hover:text-white transition-all duration-300"
+									aria-label="Chat with us on Zalo"
+									className="group w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl overflow-hidden flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#0068FF]/30"
 								>
-									<Icon
-										icon="simple-icons:zalo"
-										className="w-4 h-4 sm:w-5 sm:h-5"
-									/>
+									<ZaloIcon />
 								</a>
 							</div>
 						</div>
