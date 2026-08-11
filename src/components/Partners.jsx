@@ -59,7 +59,7 @@ const Partners = () => {
 							<img
 								src={partner.logo}
 								alt={`${partner.name} logo`}
-								className="relative h-12 sm:h-14 w-auto max-w-full object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+								className="relative h-12 sm:h-14 w-auto max-w-full object-contain group-hover:scale-105 transition-transform duration-500"
 								loading="lazy"
 								width="647"
 								height="177"
