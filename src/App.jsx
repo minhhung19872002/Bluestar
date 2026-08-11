@@ -6,6 +6,7 @@ import {
 	Services,
 	About,
 	WhyChooseUs,
+	Partners,
 	Contact,
 	Footer,
 	SEO,
@@ -58,6 +59,7 @@ function App() {
 								<Services />
 								<About />
 								<WhyChooseUs />
+								<Partners />
 								<Contact />
 							</main>
 							<Footer />

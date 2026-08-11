@@ -285,6 +285,14 @@ const en = {
 		cta: "Start Your Project Today"
 	},
 
+	// Partners Section
+	partners: {
+		badge: "Partners",
+		title: "Our",
+		titleHighlight: "Partners",
+		subtitle: "We work alongside leading businesses and technology platforms to deliver the best value to our clients.",
+	},
+
 	// About Section
 	about: {
 		badge: "About Us",

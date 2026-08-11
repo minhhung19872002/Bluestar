@@ -285,6 +285,14 @@ const vi = {
 		cta: "Bắt Đầu Dự Án Ngay"
 	},
 
+	// Partners Section
+	partners: {
+		badge: "Đối Tác",
+		title: "Đối Tác",
+		titleHighlight: "Của Chúng Tôi",
+		subtitle: "Chúng tôi hợp tác cùng các doanh nghiệp và nền tảng công nghệ hàng đầu để mang lại giá trị tốt nhất cho khách hàng.",
+	},
+
 	// About Section
 	about: {
 		badge: "Về Chúng Tôi",

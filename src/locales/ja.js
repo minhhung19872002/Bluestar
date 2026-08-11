@@ -284,6 +284,14 @@ const ja = {
 		cta: "今すぐプロジェクトを始める"
 	},
 
+	// Partners Section
+	partners: {
+		badge: "パートナー",
+		title: "私たちの",
+		titleHighlight: "パートナー",
+		subtitle: "業界をリードする企業やテクノロジープラットフォームと連携し、お客様に最高の価値をお届けします。",
+	},
+
 	// About Section
 	about: {
 		badge: "会社概要",
